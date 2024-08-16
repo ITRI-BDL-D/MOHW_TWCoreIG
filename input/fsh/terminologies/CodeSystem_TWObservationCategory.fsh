@@ -17,7 +17,7 @@ Description: """臺灣衛福部資訊處Observation類型，
 * ^copyright = "衛生福利部資訊處"
 * ^caseSensitive = true
 * ^content = #complete
-* ^count = 8
+* ^count = 6
 * ^property[0].code = #effectiveDate
 * ^property[=].uri = "http://hl7.org/fhir/concept-properties#effectiveDate"
 * ^property[=].description = "生效日期"
@@ -56,13 +56,3 @@ Description: """臺灣衛福部資訊處Observation類型，
 * #care-experience-preference ^property[=].valueDateTime = "2024-08"
 * #care-experience-preference ^property[+].code = #status
 * #care-experience-preference ^property[=].valueCode = #active
-* #social-history "Social History" "Social History (TBD)"
-* #social-history ^property[0].code = #effectiveDate
-* #social-history ^property[=].valueDateTime = "2024-08"
-* #social-history ^property[+].code = #status
-* #social-history ^property[=].valueCode = #active
-* #survey "Survey" "Survey (TBD)"
-* #survey ^property[0].code = #effectiveDate
-* #survey ^property[=].valueDateTime = "2024-08"
-* #survey ^property[+].code = #status
-* #survey ^property[=].valueCode = #active

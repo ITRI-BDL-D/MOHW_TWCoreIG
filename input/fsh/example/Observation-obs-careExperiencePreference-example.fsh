@@ -2,8 +2,7 @@ Instance: obs-careExperiencePreference-example
 InstanceOf: TWCoreObservationCareExperiencePreference
 Usage: #example
 * status = #final
-* category = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/observation-category#care-experience-preference "Care experience preference"
-* category.text = "照護經驗偏好"
+* category[twcore] = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/observation-category#care-experience-preference "Care experience preference"
 * code =  http://loinc.org#95541-9
 * subject = Reference(Patient/pat-example)
 * effectiveDateTime = "2024-01-01"

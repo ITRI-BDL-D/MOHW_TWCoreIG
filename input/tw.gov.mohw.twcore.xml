@@ -418,7 +418,7 @@
 			<reference>
 				<reference value="Observation/obs-simpleObservation-example"/>
 			</reference>
-			<name value="TBD-通用檢驗檢查"/>	
+			<name value="調查資料-通用檢驗檢查"/>	
 			<description value="依據臺灣核心-通用檢驗檢查（TW Core Simple Observation）Profile呈現通用檢驗檢查資料之範例"/>
 			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-simpleObservation-twcore"/>
 	</resource>
@@ -463,7 +463,7 @@
 			<reference>
 				<reference value="Observation/obs-occupation-example"/>
 			</reference>
-			<name value="TBD-職業"/>	
+			<name value="社會史-職業"/>	
 			<description value="依據臺灣核心-職業（TW Core Observation Occupation）Profile呈現職業之範例"/>
 			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-occupation-twcore"/>
 	</resource>

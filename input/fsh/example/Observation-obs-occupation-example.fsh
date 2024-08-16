@@ -2,7 +2,7 @@ Instance: obs-occupation-example
 InstanceOf: TWCoreObservationOccupation
 Usage: #example
 * status = #final
-* category = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/observation-category#social-history
+* category[twcore] = http://terminology.hl7.org/CodeSystem/observation-category#social-history
 * code = http://loinc.org#11341-5 "History of Occupation"
 * subject = Reference(Patient/pat-example)
 * effectivePeriod.start = "2015-04-24"

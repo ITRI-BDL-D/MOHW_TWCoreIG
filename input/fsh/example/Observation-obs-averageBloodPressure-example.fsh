@@ -2,7 +2,7 @@ Instance: obs-averageBloodPressure-example
 InstanceOf: TWCoreObservationAverageBloodPressure
 Usage: #example
 * status = #final
-* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* category[VSCat] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
 * code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#96607-7 "Blood pressure panel mean systolic and mean diastolic"
 * code.text = "平均血壓"
 * subject.reference = "Patient/pat-example"
