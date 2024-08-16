@@ -20,6 +20,9 @@
 ### Condition
 - [病情、問題或診斷的詳細資料](Condition-con-example.html)：依據臺灣核心-病情、問題或診斷（TW Core Condition）Profile呈現病情、問題或診斷之範例
 
+### Device
+- [植入式裝置（TW](Device-dev-example.html)：依據臺灣核心-植入式裝置（TW Core Implantable Device）Profile呈現植入式裝置之範例
+
 ### DiagnosticReport
 - [診斷報告](DiagnosticReport-dia-example.html)：依據臺灣核心-診斷報告（TW Core DiagnosticReport）Profile呈現診斷報告之範例
 
@@ -71,8 +74,12 @@
 - [response (回應）](MessageHeader-mes-response-example.html)：依據臺灣核心-訊息表頭（TW Core MessageHeader）Profile呈現訊息表頭－response資料之範例
 
 ### Observation
+- [TBD-通用檢驗檢查](Observation-obs-simpleObservation-example.html)：依據臺灣核心-通用檢驗檢查（TW Core Simple Observation）Profile呈現通用檢驗檢查資料之範例
 - [檢驗檢查資料-使用臺灣醫療服務給付項目-檢驗值集代碼](Observation-obs-lab-example.html)：依據臺灣核心-檢驗檢查（TW Core Observation Laboratory Result）Profile呈現檢驗檢查資料之範例
 - [檢驗檢查資料-使用LOINC實驗室檢驗檢查代碼](Observation-obs-loinc-example.html)：依據臺灣核心-檢驗檢查（TW Core Observation Laboratory Result）Profile呈現檢驗檢查資料之範例
+- [生命體徵資料-平均血壓](Observation-obs-averageBloodPressure-example.html)：依據臺灣核心-平均血壓(TW Core Observation Average Blood Pressure) Profile呈現平均血壓之範例
+- [照護經驗偏好-病人照護偏好註記](Observation-obs-careExperiencePreference-example.html)：依據臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）Profile呈現病人照護偏好註記之範例
+- [TBD-職業](Observation-obs-occupation-example.html)：依據臺灣核心-職業（TW Core Observation Occupation）Profile呈現職業之範例
 - [生命體徵資料-血壓](Observation-obs-bloodPressure-example.html)：依據臺灣核心-血壓（TW Core Observation Blood Pressure）Profile呈現血壓之範例
 - [生命體徵資料-身體質量指數](Observation-obs-bmi-example.html)：依據臺灣核心-身體質量指數（TW Core Observation BMI）Profile呈現身體質量指數之範例
 
