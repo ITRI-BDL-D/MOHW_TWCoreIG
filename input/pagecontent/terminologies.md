@@ -39,6 +39,7 @@
 - [臺灣中華郵政3碼郵遞區號值集](ValueSet-postal-code3-tw.html)
 - [臺灣中華郵政5碼郵遞區號值集](ValueSet-postal-code5-tw.html)
 - [臺灣中華郵政6碼郵遞區號值集](ValueSet-postal-code6-tw.html)
+- [臺灣衛福部資訊處Observation類型值集](ValueSet-observation-category.html)
 
 ### 代碼系統(CodeSystems)
 - [臺灣健保署2001年中文版ICD-9-CM](CodeSystem-icd-9-cm-2001-tw.html)
@@ -65,6 +66,7 @@
 - [臺灣中華郵政3碼郵遞區號](CodeSystem-postal-code3-tw.html)
 - [臺灣中華郵政5碼郵遞區號](CodeSystem-postal-code5-tw.html)
 - [臺灣中華郵政6碼郵遞區號](CodeSystem-postal-code6-tw.html)
+- [臺灣衛福部資訊處Observation類型](CodeSystem-observation-category.html)
 - [LOINC](CodeSystem-loinc-tw.html)
 - [SNOMED CT Code](CodeSystem-sct-tw.html)
 

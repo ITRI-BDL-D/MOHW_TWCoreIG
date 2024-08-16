@@ -10,7 +10,8 @@ GOTO igpublish
 
 :isonline
 ECHO We're online
-SET txoption=
+SET txoption= -no-sushi
+@REM SET txoption=
 
 :igpublish
 

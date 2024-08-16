@@ -5,3 +5,4 @@ template/*
 output/*
 /input-cache
 .DS_Store
+package*

@@ -144,6 +144,15 @@
 			<description value="依據臺灣核心-病情、問題或診斷(TW Core Condition) Profile呈現病情、問題或診斷之範例"/>
 			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore"/>
 	</resource>
+
+	<resource>
+			<reference>
+				<reference value="Device/dev-example"/>
+			</reference>
+			<name value="植入式裝置"/>	
+			<description value="依據臺灣核心-植入式裝置（TW Core Implantable Device）Profile呈現植入式裝置之範例"/>
+			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Device-twcore"/>
+	</resource>
 		
 	<resource>
 			<reference>
@@ -407,6 +416,15 @@
 
 	<resource>
 			<reference>
+				<reference value="Observation/obs-simpleObservation-example"/>
+			</reference>
+			<name value="調查資料-通用檢驗檢查"/>	
+			<description value="依據臺灣核心-通用檢驗檢查（TW Core Simple Observation）Profile呈現通用檢驗檢查資料之範例"/>
+			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-simpleObservation-twcore"/>
+	</resource>
+
+	<resource>
+			<reference>
 				<reference value="Observation/obs-lab-example"/>
 			</reference>
 			<name value="檢驗檢查資料-使用臺灣醫療服務給付項目-檢驗值集代碼"/>	
@@ -422,7 +440,34 @@
 			<description value="依據臺灣核心-檢驗檢查(TW Core Observation Laboratory Result) Profile呈現檢驗檢查資料之範例"/>
 			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-laboratoryResult-twcore"/>
 	</resource>
-		
+	
+	<resource>
+			<reference>
+				<reference value="Observation/obs-averageBloodPressure-example"/>
+			</reference>
+			<name value="生命體徵資料-平均血壓"/>	
+			<description value="依據臺灣核心-平均血壓(TW Core Observation Average Blood Pressure) Profile呈現平均血壓之範例"/>
+			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-averageBloodPressure-twcore"/>
+	</resource>
+
+	<resource>
+			<reference>
+				<reference value="Observation/obs-careExperiencePreference-example"/>
+			</reference>
+			<name value="照護經驗偏好-病人照護偏好註記"/>	
+			<description value="依據臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）Profile呈現病人照護偏好註記之範例"/>
+			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-careExperiencePreference-twcore"/>
+	</resource>
+
+	<resource>
+			<reference>
+				<reference value="Observation/obs-occupation-example"/>
+			</reference>
+			<name value="社會史-職業"/>	
+			<description value="依據臺灣核心-職業（TW Core Observation Occupation）Profile呈現職業之範例"/>
+			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-occupation-twcore"/>
+	</resource>
+
 	<resource>
 			<reference>
 				<reference value="Observation/obs-bloodPressure-example"/>
