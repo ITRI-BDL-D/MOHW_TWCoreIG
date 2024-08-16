@@ -149,7 +149,7 @@
 			<reference>
 				<reference value="Device/dev-example"/>
 			</reference>
-			<name value="植入式裝置（TW"/>	
+			<name value="植入式裝置"/>	
 			<description value="依據臺灣核心-植入式裝置（TW Core Implantable Device）Profile呈現植入式裝置之範例"/>
 			<exampleCanonical value="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Device-twcore"/>
 	</resource>

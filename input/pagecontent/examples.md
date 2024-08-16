@@ -21,7 +21,7 @@
 - [病情、問題或診斷的詳細資料](Condition-con-example.html)：依據臺灣核心-病情、問題或診斷（TW Core Condition）Profile呈現病情、問題或診斷之範例
 
 ### Device
-- [植入式裝置（TW](Device-dev-example.html)：依據臺灣核心-植入式裝置（TW Core Implantable Device）Profile呈現植入式裝置之範例
+- [植入式裝置](Device-dev-example.html)：依據臺灣核心-植入式裝置（TW Core Implantable Device）Profile呈現植入式裝置之範例
 
 ### DiagnosticReport
 - [診斷報告](DiagnosticReport-dia-example.html)：依據臺灣核心-診斷報告（TW Core DiagnosticReport）Profile呈現診斷報告之範例
