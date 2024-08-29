@@ -14,10 +14,10 @@
 - [Message response（回應）](Bundle-bun-message-response-example.html)：依據臺灣核心-資料交換基本單位-訊息傳送（TW Core Bundle Message）Profile呈現資料交換基本單位 type=message response之範例
 
 ### CarePlan
-- [照護計畫](CarePlan-cap-twcore.html)：依據臺灣核心-照護計畫（TW Core CarePlan）Profile呈現照護計畫之範例
+- [照護計畫](CarePlan-cap-example.html)：依據臺灣核心-照護計畫（TW Core CarePlan）Profile呈現照護計畫之範例
 
 ### CareTeam
-- [照護團隊](CareTeam-cat-twcore.html)：依據臺灣核心-照護團隊（TW Core CareTeam）Profile呈現照護團隊之範例
+- [照護團隊](CareTeam-cat-example.html)：依據臺灣核心-照護團隊（TW Core CareTeam）Profile呈現照護團隊之範例
 
 ### Composition
 - [陳加玲的病摘](Composition-com-example.html)：依據臺灣核心-臨床文件架構（TW Core Composition）Profile呈現陳加玲的病摘之範例
