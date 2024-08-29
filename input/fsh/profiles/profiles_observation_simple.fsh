@@ -7,7 +7,6 @@ Alias: $PractitionerRole-twcore = https://twcore.mohw.gov.tw/ig/twcore/Structure
 Alias: $DocumentReference-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DocumentReference-twcore
 Alias: $ImagingStudy-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/ImagingStudy-twcore
 Alias: $Media-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Media-twcore
-Alias: $observation-category = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/observation-category
 
 Profile: TWCoreObservation
 Parent: Observation
@@ -28,7 +27,7 @@ Description: "此臺灣核心-通用檢驗檢查（TW Core Simple Observation）
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains twcore 0..* MS
-* category[twcore] from $observation-category (required)
+* category[twcore] from https://twcore.mohw.gov.tw/ig/twcore/ValueSet/observation-category (required)
 * category[twcore] ^binding.description = "此slice綁定的值集之綁定強度雖為最高強度「要求使用(Requird)」，但因slice之特性，其不會限制僅能填此值集中的代碼，故在實作時也可使用其他值集的代碼。"
 * code only $CodeableConcept-tw
 * code MS

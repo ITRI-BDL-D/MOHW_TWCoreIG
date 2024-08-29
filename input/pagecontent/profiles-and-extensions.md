@@ -9,6 +9,12 @@
   - [臺灣核心-資料交換基本單位-文件（TW Core Bundle Document）](StructureDefinition-Bundle-document-twcore.html) 
   - [臺灣核心-資料交換基本單位-訊息（TW Core Bundle Message）](StructureDefinition-Bundle-message-twcore.html) 
 
+#### CarePlan
+- [臺灣核心-照護計畫（TW Core CarePlan）](StructureDefinition-CarePlan-twcore.html) 
+
+#### CareTeam
+- [臺灣核心-照護團隊（TW Core CareTeam）](StructureDefinition-CareTeam-twcore.html) 
+
 #### Composition
 - [臺灣核心-臨床文件架構（TW Core Composition）](StructureDefinition-Composition-twcore.html) 
 
@@ -57,6 +63,10 @@
 - [臺灣核心-平均血壓（TW Core Observation Average Blood Pressure）](StructureDefinition-Observation-averageBloodPressure-twcore.html)
 - [臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）](StructureDefinition-Observation-careExperiencePreference-twcore.html)
 - [臺灣核心-職業（TW Core Observation Occupation）](StructureDefinition-Observation-occupation-twcore.html)
+- [臺灣核心-妊娠計畫（TW Core Observation Pregnancy Intent）](StructureDefinition-Observation-pregnancyIntent-twcore.html)
+- [臺灣核心-妊娠狀態（TW Core Observation Pregnancy Status）](StructureDefinition-Observation-pregnancyStatus-twcore.html)
+- [臺灣核心-健康狀態篩檢與評估（TW Core Observation Screening Assessment）](StructureDefinition-Observation-screeningAssessment-twcore.html)
+- [臺灣核心-性傾向（TW Core Observation Sexual Orientation）](StructureDefinition-Observation-sexualOrientation-twcore.html)
 - [臺灣核心-生命體徵（TW Core Observation Vital Signs）](StructureDefinition-Observation-vitalSigns-twcore.html) 
   - [臺灣核心-血壓（TW Core Observation Blood Pressure）](StructureDefinition-Observation-bloodPressure-twcore.html) 
   - [臺灣核心-身體質量指數（TW Core Observation BMI）](StructureDefinition-Observation-bmi-twcore.html) 
@@ -82,6 +92,8 @@
 #### Specimen
 - [臺灣核心-檢體（TW Core Specimen）](StructureDefinition-Specimen-twcore.html) 
 
+#### RelatedPerson
+- [臺灣核心-相關人士（TW Core RelatedPerson）](StructureDefinition-RelatedPerson-twcore.html) 
 
 -------
 

@@ -13,6 +13,12 @@
 - [Message request（傳送）](Bundle-bun-message-request-example.html)：依據臺灣核心-資料交換基本單位-訊息傳送（TW Core Bundle Message）Profile呈現資料交換基本單位 type=message request之範例
 - [Message response（回應）](Bundle-bun-message-response-example.html)：依據臺灣核心-資料交換基本單位-訊息傳送（TW Core Bundle Message）Profile呈現資料交換基本單位 type=message response之範例
 
+### CarePlan
+- [照護計畫](CarePlan-cap-example.html)：依據臺灣核心-照護計畫（TW Core CarePlan）Profile呈現照護計畫之範例
+
+### CareTeam
+- [照護團隊](CareTeam-cat-example.html)：依據臺灣核心-照護團隊（TW Core CareTeam）Profile呈現照護團隊之範例
+
 ### Composition
 - [陳加玲的病摘](Composition-com-example.html)：依據臺灣核心-臨床文件架構（TW Core Composition）Profile呈現陳加玲的病摘之範例
 - [手術摘要報告](Composition-com-surgery-example.html)：依據臺灣核心-臨床文件架構（TW Core Composition）Profile呈現手術摘要報告之範例
@@ -80,6 +86,10 @@
 - [生命體徵資料-平均血壓](Observation-obs-averageBloodPressure-example.html)：依據臺灣核心-平均血壓(TW Core Observation Average Blood Pressure) Profile呈現平均血壓之範例
 - [照護經驗偏好-病人照護偏好註記](Observation-obs-careExperiencePreference-example.html)：依據臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）Profile呈現病人照護偏好註記之範例
 - [社會史-職業](Observation-obs-occupation-example.html)：依據臺灣核心-職業（TW Core Observation Occupation）Profile呈現職業之範例
+- [妊娠計畫](Observation-obs-pregnancyIntent-example.html)：依據臺灣核心-臺灣核心-妊娠計畫（TW Core Observation Pregnancy Intent）Profile呈現妊娠計畫之範例
+- [妊娠狀態](Observation-obs-pregnancyStatus-example.html)：依據臺灣核心-妊娠狀態（TW Core Observation Pregnancy Status）Profile呈現妊娠狀態之範例
+- [健康狀態篩檢與評估](Observation-obs-screeningAssessment-example.html)：依據臺灣核心-健康狀態篩檢與評估（TW Core Observation Screening Assessment）Profile呈現健康狀態篩檢與評估之範例
+- [性傾向](Observation-obs-sexualOrientation-example.html)：依據臺灣核心-性傾向（TW Core Observation Sexual Orientation）Profile呈現性傾向之範例
 - [生命體徵資料-血壓](Observation-obs-bloodPressure-example.html)：依據臺灣核心-血壓（TW Core Observation Blood Pressure）Profile呈現血壓之範例
 - [生命體徵資料-身體質量指數](Observation-obs-bmi-example.html)：依據臺灣核心-身體質量指數（TW Core Observation BMI）Profile呈現身體質量指數之範例
 
@@ -114,3 +124,6 @@
 - [糞便檢體](Specimen-spe-stool-example.html)：依據臺灣核心-檢體（TW Core Specimen）Profile呈現糞便檢體之範例
 - [尿液檢體](Specimen-spe-ur-example.html)：依據臺灣核心-檢體（TW Core Specimen）Profile呈現尿液檢體之範例
 - [組織檢體](Specimen-spe-ance-example.html)：依據臺灣核心-檢體（TW Core Specimen）Profile呈現組織檢體採集之範例
+
+### RelatedPerson
+- [相關人士](RelatedPerson-rel-example.html) 依據臺灣核心-相關人士（TW Core RelatedPerson）Profile呈現相關人士之範例
