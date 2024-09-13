@@ -7,7 +7,7 @@ Usage: #example
 * status = #final
 * category[survey] = $observation-category#survey "Survey"
 * category[survey].text = "Survey"
-* code = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/loinc-survey-codes#32401-2 "10 minute Apgar Color"
+* code = $loinc#32401-2 "10 minute Apgar Color"
 * code.text = "Apgar color score"
 * subject = Reference(Patient/pat-example)
 * effectiveDateTime = "2016-05-18T22:33:22+00:00"
