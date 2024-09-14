@@ -68,8 +68,15 @@
 - [臺灣核心-健康狀態篩檢與評估（TW Core Observation Screening Assessment）](StructureDefinition-Observation-screeningAssessment-twcore.html)
 - [臺灣核心-性傾向（TW Core Observation Sexual Orientation）](StructureDefinition-Observation-sexualOrientation-twcore.html)
 - [臺灣核心-生命體徵（TW Core Observation Vital Signs）](StructureDefinition-Observation-vitalSigns-twcore.html) 
+  - [臺灣核心-兒童及青少年身體質量指數（TW Core Pediatric BMI for Age Observation）](StructureDefinition-Observation-pediatric-bmi-age-twcore.html)
   - [臺灣核心-血壓（TW Core Observation Blood Pressure）](StructureDefinition-Observation-bloodPressure-twcore.html) 
   - [臺灣核心-身體質量指數（TW Core Observation BMI）](StructureDefinition-Observation-bmi-twcore.html) 
+  - [臺灣核心-身高（TW Core Observation Body Height）](StructureDefinition-Observation-body-height-twcore.html)
+  - [臺灣核心-體溫（TW Core Observation Body Temperature）](StructureDefinition-Observation-body-temperature-twcore.html)
+  - [臺灣核心-體重（TW Core Observation Body Weight）](StructureDefinition-Observation-body-weight-twcore.html)
+  - [臺灣核心-頭圍（TW Core Observation Head Circumference）](StructureDefinition-Observation-head-circumference-twcore.html)
+  - [臺灣核心-心率（TW Core Observation Heart Rate）](StructureDefinition-Observation-heart-rate-twcore.html)
+  - [臺灣核心-脈搏血氧飽和度（TW Core Observation Pulse Oximetry）](StructureDefinition-Observation-pulse-oximetry-twcore.html)
 
 #### Organization
 - [臺灣核心-機構（TW Core Organization）](StructureDefinition-Organization-twcore.html) 
