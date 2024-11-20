@@ -126,7 +126,7 @@ body{font-family: arial,"Microsoft JhengHei","微軟正黑體",sans-serif !impor
 
 <div style="padding-left: 10px;"> 
 <p><b>手動下載IG Package</b></p>
-<p>可於<a href="downloads.html">結構定義與範例檔下載頁</a>下載整個IG的<a href="package.tgz">Package</a>。Package Cache檔案路徑如下：</p>
+<p>可於<a href="downloads.html">結構定義、TWCDI與範例檔下載頁</a>下載整個IG的<a href="package.tgz">Package</a>。Package Cache檔案路徑如下：</p>
 <li>Windows：c:\users\&lt;username&gt;\.fhir\packages</li>
 <li>Unix/Linux：/~/.fhir/packages</li>
 <p>可試跑語法確認Package Cache路徑與所設定路徑一致。</p>

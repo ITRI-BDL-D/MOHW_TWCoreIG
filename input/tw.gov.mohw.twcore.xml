@@ -346,7 +346,7 @@
 			</reference>
 			<name value="醫院位置資料"/>	
 			<description value="依據Location呈現醫院位置資料"/>
-	</resource-->
+	    </resource-->
 
 		<resource>
 			<reference>
@@ -1791,7 +1791,7 @@
 			</page>
 			<page>
 				<nameUrl value="downloads.html" />
-				<title value="結構定義與範例檔下載頁" />
+				<title value="結構定義、TWCDI與範例檔下載頁" />
 				<generation value="markdown" />
 			</page>
 			<page>
