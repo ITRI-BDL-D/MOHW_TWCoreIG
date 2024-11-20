@@ -1,4 +1,4 @@
-# **四、TWCDI資料元素與TW Core Profiles之對應關係與使用**
+# **TWCDI資料元素與TW Core Profiles之對應關係與使用**
 TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核心資料互通性(TWCDI)應用需求。TWCDI和TW Core是互補的存在，TWCDI定義高階資料要求，TW Core則提供詳細的基於FHIR 的設定檔(Profiles)，以滿足這些要求。
 - TWCDI資料類別和元素名稱可能與TW Core設定檔(Profile)名稱和元素名稱不同。
 - 並非每個TWCDI資料類別和元素都對應到單一設定檔(Profile)。
@@ -127,9 +127,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 |- Result Unit of Measure|[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)|
 |- Result Reference Range|[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)|
 |- Result Interpretation|[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)|
-|- ` `Specimen Identifier|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
-|- ` `Specimen Source Site|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
-|- ` `Specimen Condition Acceptability|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
+|- Specimen Identifier|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
+|- Specimen Source Site|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
+|- Specimen Condition Acceptability|[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)|
 
 14. **用於診斷、治癒、緩解、治療或預防疾病的藥物：**
 
