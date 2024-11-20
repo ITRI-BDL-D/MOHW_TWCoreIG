@@ -11,5 +11,5 @@ Usage: #example
 * subject = Reference(Patient/pat-example)
 * effectiveDateTime = "2021-11-11"
 * performer = Reference(Practitioner/pra-dr-example)
-* valueCodeableConcept = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/snomed-sexual-orientation-code#38628009 "Homosexuality"
+* valueCodeableConcept = $loinc#38628009 "Homosexuality"
 * valueCodeableConcept.text = "Homosexuality"

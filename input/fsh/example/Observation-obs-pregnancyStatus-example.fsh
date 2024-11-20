@@ -12,5 +12,5 @@ Usage: #example
 * subject = Reference(Patient/pat-example)
 * effectiveDateTime = "2022-08-24T10:39:52Z"
 * valueCodeableConcept.coding.version = "http://snomed.info/sct/731000124108"
-* valueCodeableConcept.coding = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/snomed-pregnancy-status-code#77386006 "Pregnancy"
+* valueCodeableConcept.coding = $sct#77386006 "Pregnancy"
 * valueCodeableConcept.text = "Pregnancy"

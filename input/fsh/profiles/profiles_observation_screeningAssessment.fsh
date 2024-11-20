@@ -66,18 +66,3 @@ Description: "此臺灣核心-健康狀態篩檢與評估（TW Core Observation 
 * derivedFrom ^type[=].targetProfile[=].extension.valueBoolean = true
 * derivedFrom ^type[=].targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * derivedFrom ^type[=].targetProfile[=].extension.valueBoolean = true
-
-Invariant: tw-core-4
-Description: "If there is no component or hasMember element then either a value[x] or a data absent reason must be present."
-* severity = #error
-* expression = "(component.empty() and hasMember.empty()) implies (dataAbsentReason.exists() or value.exists())"
-
-Invariant: tw-core-3
-Description: "Datetime must be at least to day."
-* severity = #error
-* expression = "$this is dateTime implies $this.toString().length() >= 10"
-
-Invariant: tw-core-5
-Description: "SHALL use UCUM for coded quantity units."
-* severity = #error
-* expression = "ofType(Quantity).system.empty() or ofType(Quantity).system = 'http://unitsofmeasure.org'"

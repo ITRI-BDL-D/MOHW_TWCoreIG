@@ -90,8 +90,15 @@
 - [妊娠狀態](Observation-obs-pregnancyStatus-example.html)：依據臺灣核心-妊娠狀態（TW Core Observation Pregnancy Status）Profile呈現妊娠狀態之範例
 - [健康狀態篩檢與評估](Observation-obs-screeningAssessment-example.html)：依據臺灣核心-健康狀態篩檢與評估（TW Core Observation Screening Assessment）Profile呈現健康狀態篩檢與評估之範例
 - [性傾向](Observation-obs-sexualOrientation-example.html)：依據臺灣核心-性傾向（TW Core Observation Sexual Orientation）Profile呈現性傾向之範例
+- [生命體徵資料-兒童及青少年身體質量指數](Observation-obs-pediatric-bmi-example.html)：依據臺臺灣核心-兒童及青少年身體質量指數（TW Core Pediatric BMI for Age Observation）Profile呈現兒童及青少年身體質量指數之範例
 - [生命體徵資料-血壓](Observation-obs-bloodPressure-example.html)：依據臺灣核心-血壓（TW Core Observation Blood Pressure）Profile呈現血壓之範例
 - [生命體徵資料-身體質量指數](Observation-obs-bmi-example.html)：依據臺灣核心-身體質量指數（TW Core Observation BMI）Profile呈現身體質量指數之範例
+- [生命體徵資料-身高](Observation-obs-height-example.html)：依依據臺灣核心-身高（TW Core Observation Body Height）Profile呈現身高之範例
+- [生命體徵資料-體溫](Observation-obs-temperature-example.html)：依據臺灣核心-體溫（TW Core Observation Body Temperature）Profile呈現體溫之範例
+- [生命體徵資料-體重](Observation-obs-weight-example.html)：依據臺灣核心-體重（TW Core Observation Body Weight）Profile呈現體重之範例
+- [生命體徵資料-頭圍](Observation-obs-head-circumference-example.html)：依據灣核心-頭圍（TW Core Observation Head Circumference） Profile呈現頭圍之範例
+- [生命體徵資料-心率](Observation-obs-heart-rate-example.html)：據臺灣核心-心率（TW Core Observation Heart Rate）Profile呈現心率之範例
+- [生命體徵資料-脈搏血氧飽和度](Observation-obs-oxygen-saturation-example.html)：依據臺臺灣核心-脈搏血氧飽和度（TW Core Observation Pulse Oximetry）Profile呈現脈搏血氧飽和度之範例
 
 ### Organization 
 - [機構基本資料](Organization-org-example.html)：依據臺灣核心-機構（TW Core Organization）Profile呈現機構基本資料之範例
