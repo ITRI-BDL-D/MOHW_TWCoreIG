@@ -7,7 +7,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 1. **與接觸某種物質相關的有害或不良的生理反應：**
 
 |**Allergies and Intolerances(過敏和不耐受)**|[臺灣核心-過敏或不耐症(TW Core AllergyIntolerance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)|
-| - | - |
+| :- | :- |
 |- Substance (Medication)|[臺灣核心-過敏或不耐症(TW Core AllergyIntolerance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)|
 |- Substance (Drug Class)|[臺灣核心-過敏或不耐症(TW Core AllergyIntolerance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)|
 |- Substance (Non-Medication)|[臺灣核心-過敏或不耐症(TW Core AllergyIntolerance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-AllergyIntolerance-twcore.html)|
@@ -16,7 +16,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 2. **有關參與或預計參與患者護理的人員資訊：**
 
 |**Care Team Members**|[臺灣核心-照護團隊(TW Core CareTeam)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CareTeam-twcore.html)|
-| - | - |
+| :- | :- |
 |- Name|<p>[臺灣核心-健康照護服務提供者(TW Core Practitioner)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Practitioner-twcore.html)</p><p>[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)</p><p>[臺灣核心-相關人士(TW Core RelatedPerson)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-RelatedPerson-twcore.html)</p>|
 |- Identifier|<p>[臺灣核心-健康照護服務提供者(TW Core Practitioner)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Practitioner-twcore.html)</p><p>[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)</p>|
 |- Location|<p>[臺灣核心-健康照護服務提供者角色(TW Core PractitionerRole)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-PractitionerRole-twcore.html)</p><p>[臺灣核心-健康照護服務提供者(TW Core Practitioner)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Practitioner-twcore.html)</p><p>[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)</p><p>[臺灣核心-相關人士(TW Core RelatedPerson)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-RelatedPerson-twcore.html)</p>|
@@ -26,7 +26,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 3. **描述性患者臨床資料：**
 
 |**Clinical Notes**|<p>[臺灣核心-文件參照(TW Core DocumentReference)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Consultation Note|[臺灣核心-文件參照(TW Core DocumentReference)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)|
 |- Discharge Summary Note|[臺灣核心-文件參照(TW Core DocumentReference)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)|
 |- History & Physical|[臺灣核心-文件參照(TW Core DocumentReference)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DocumentReference-twcore.html)|
@@ -37,21 +37,21 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 4. **進行非影像和非實驗室測試，得出針對患者的結構化或非結構化結果，以促進病情的診斷和管理：**
 
 |**Clinical Tests**|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Clinical Test|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
 |- Clinical Test Result/Report|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
 
 5. **產生需要具有資格的專業人士解讀的醫學影像測試：**
 
 |**Diagnostic Imaging**|<p>[臺灣核心-臨床檢驗檢查(TW Core Observation Clinical Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-clinical-result-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p><p>[臺灣核心-影像檢查(TW Core ImagingStudy)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-ImagingStudy-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Diagnostic Imaging Test|<p>[臺灣核心-臨床檢驗檢查(TW Core Observation Clinical Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-clinical-result-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p><p>[臺灣核心-影像檢查(TW Core ImagingStudy)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-ImagingStudy-twcore.html)</p>|
 |- Diagnostic Imaging Result/Report|<p>[臺灣核心-臨床檢驗檢查(TW Core Observation Clinical Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-clinical-result-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p><p>[臺灣核心-影像檢查(TW Core ImagingStudy)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-ImagingStudy-twcore.html)</p>|
 
 6. **與醫療保健提供者和患者之間的互動相關的資訊：**
 
 |**Encounter**|[臺灣核心-就醫事件(TW Core Encounter)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)|
-| - | - |
+| :- | :- |
 |- Identifier|[臺灣核心-就醫事件(TW Core Encounter)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)|
 |- Type|[臺灣核心-就醫事件(TW Core Encounter)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Encounter-twcore.html)|
 |- Diagnosis|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
@@ -63,7 +63,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 7. **可用服務或資源的實體位置：**
 
 |**Facility Information**|[臺灣核心-地點(TW Core Location)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Location-twcore.html)|
-| - | - |
+| :- | :- |
 |- Identifier|[臺灣核心-地點(TW Core Location)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Location-twcore.html)|
 |- Type|[臺灣核心-地點(TW Core Location)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Location-twcore.html)|
 |- Name|[臺灣核心-地點(TW Core Location)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Location-twcore.html)|
@@ -71,7 +71,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 8. **目標：**
 
 |**Goals and Preferences**|[臺灣核心-目標(TW Core Goal)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)|
-| - | - |
+| :- | :- |
 |- Patient Goals|[臺灣核心-目標(TW Core Goal)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)|
 |- SDOH Goals|[臺灣核心-目標(TW Core Goal)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Goal-twcore.html)|
 |- Treatment Intervention Preference|[臺灣核心-病人治療偏好註記(TW Core Observation Treatment Intervention Preference)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-treatment-intervention-preference-twcore.html)|
@@ -80,7 +80,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 9. **與個人醫療保險範圍相關的資料：**
 
 |**Health Insurance Information**|<p>[臺灣核心-給付範圍(TW Core Coverage)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)</p><p>[臺灣核心-機構(TW Core Organization)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Organization-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Coverage Status|[臺灣核心-給付範圍(TW Core Coverage)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)|
 |- Coverage Type|[臺灣核心-給付範圍(TW Core Coverage)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)|
 |- Relationship to Subscriber|[臺灣核心-給付範圍(TW Core Coverage)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Coverage-twcore.html)|
@@ -92,7 +92,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 10. **對患者、患者家屬或患者的醫療保健提供者感興趣、重要性或擔憂的健康相關問題進行評估，以識別需求、問題或狀況：**
 
 |**Health Status Assessments**|<p>[臺灣核心-通用檢驗檢查(TW Core Simple Observation)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-simple-twcore.html)</p><p>[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)</p><p>[臺灣核心-健康狀態篩檢與評估(TW Core Observation Screening Assessment)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-screening-assessment-twcore.html)</p><p>[臺灣核心-問卷題目回覆(TW Core QuestionnaireResponse)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-QuestionnaireResponse-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Health Concerns|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
 |- Functional Status|<p>[臺灣核心-通用檢驗檢查(TW Core Simple Observation)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-simple-twcore.html)</p><p>[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)</p><p>[臺灣核心-健康狀態篩檢與評估(TW Core Observation Screening Assessment)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-screening-assessment-twcore.html)</p><p>[臺灣核心-問卷題目回覆(TW Core QuestionnaireResponse)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-QuestionnaireResponse-twcore.html)</p>|
 |- Disability Status|<p>[臺灣核心-通用檢驗檢查(TW Core Simple Observation)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-simple-twcore.html)</p><p>[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)</p><p>[臺灣核心-健康狀態篩檢與評估(TW Core Observation Screening Assessment)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-screening-assessment-twcore.html)</p><p>[臺灣核心-問卷題目回覆(TW Core QuestionnaireResponse)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-QuestionnaireResponse-twcore.html)</p>|
@@ -108,18 +108,18 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 11. **疫苗接種記錄：**
 
 |**Immunizations**|[臺灣核心-疫苗接種(TW Core Immunization)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)|
-| - | - |
+| :- | :- |
 
 12. **用於醫療目的的儀器、機器、器具、植入物、軟體或其他物品：**
 
 |**Medical Devices**|[臺灣核心-植入式裝置(TW Core Implantable Device)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)|
-| - | - |
+| :- | :- |
 |- Unique Device Identifier(s) for a Patient's Implantable Device(s)|[臺灣核心-植入式裝置(TW Core Implantable Device)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Device-twcore.html)|
 
 13. **分析臨床樣本以獲得有關患者健康的資訊：**
 
 |**Laboratory**|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p><p>[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Tests|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
 |- Values/Results|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p>|
 |- Specimen Type|<p>[臺灣核心-檢驗檢查(TW Core Observation Laboratory Result)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-laboratoryResult-twcore.html)</p><p>[臺灣核心-檢體(TW Core Specimen)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Specimen-twcore.html)</p>|
@@ -134,7 +134,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 14. **用於診斷、治癒、緩解、治療或預防疾病的藥物：**
 
 |**Medications**|<p>[臺灣核心-藥品(TW Core Medication)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Medication-twcore.html)</p><p>[臺灣核心-藥品請求(TW Core MedicationRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-MedicationRequest-twcore.html)</p><p>[臺灣核心-配藥或藥品調劑(TW Core MedicationDispense](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-MedicationDispense-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Medications|<p>[臺灣核心-藥品(TW Core Medication)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Medication-twcore.html)</p><p>[臺灣核心-藥品請求(TW Core MedicationRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-MedicationRequest-twcore.html)</p>|
 |- Dose|[臺灣核心-藥品請求(TW Core MedicationRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-MedicationRequest-twcore.html)|
 |- Dose Unit of Measure|[臺灣核心-藥品請求(TW Core MedicationRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-MedicationRequest-twcore.html)|
@@ -146,7 +146,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 15. **用於對個人進行分類以進行識別、記錄匹配和其他目的的資料：**
 
 |**Patient Demographics**|<p>[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)</p><p>[臺灣核心-性傾向(TW Core Observation Sexual Orientation)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-sexual-orientation-twcore.html)</p><p>[臺灣核心-職業(TW Core Observation Occupation)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-occupation-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- First Name|[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)|
 |- Last Name|[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)|
 |- Previous Name|[臺灣核心-病人(TW Core Patient)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Patient-twcore.html)|
@@ -168,13 +168,13 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 16. **指導患者治療的結論和工作假設以及未來治療的建議：**
 
 |**Patient Summary and Plan**|[臺灣核心-照護計畫(TW Core CarePlan)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)|
-| - | - |
+| :- | :- |
 |- Assessment and Plan of Treatment|[臺灣核心-照護計畫(TW Core CarePlan)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-CarePlan-twcore.html)|
 
 17. **診斷或就醫的原因：**
 
 |**Problems**|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
-| - | - |
+| :- | :- |
 |- Date of Resolution|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
 |- Date of Diagnosis|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
 |- SDOH Problems/Health Concerns|[臺灣核心-病情、問題或診斷(TW Core Condition)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Condition-twcore.html)|
@@ -183,7 +183,7 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 18. **作為提供護理的一部分，為患者或在患者身上進行的活動：**
 
 |**Procedures**|<p>[臺灣核心-處置或手術(TW Core Procedure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Procedure-twcore.html)</p><p>[臺灣核心-服務請求(TW Core ServiceRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-ServiceRequest-twcore.html)</p>|
-| - | - |
+| :- | :- |
 |- Procedure|[臺灣核心-處置或手術(TW Core Procedure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Procedure-twcore.html)|
 |- Performance Time|<p>[臺灣核心-處置或手術(TW Core Procedure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Procedure-twcore.html)</p><p>[臺灣核心-診斷報告(TW Core DiagnosticReport)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-DiagnosticReport-twcore.html)</p><p>[臺灣核心-疫苗接種(TW Core Immunization)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html)</p>|
 |- Reason for Referral|<p>[臺灣核心-服務請求(TW Core ServiceRequest)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-ServiceRequest-twcore.html)</p><p>[臺灣核心-處置或手術(TW Core Procedure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Procedure-twcore.html)</p>|
@@ -192,14 +192,14 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 19. **元資料(metadata)或有關資料的額外資訊，涉及資料創建者和創建時間(電子/數位簽章)：**
 
 |**Provenance**|[臺灣核心-出處(TW Core Provenance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Provenance-twcore.html)|
-| - | - |
+| :- | :- |
 |- Author Time Stamp|[臺灣核心-出處(TW Core Provenance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Provenance-twcore.html)|
 |- Author Organization|[臺灣核心-出處(TW Core Provenance)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Provenance-twcore.html)|
 
 20. **患者的生理測量，顯示身體維持生命功能的狀態：**
 
 |**Vital Signs**|[臺灣核心-生命體徵(TW Core Observation Vital Signs)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-vitalSigns-twcore.html)|
-| - | - |
+| :- | :- |
 |- Average Blood Pressure|[臺灣核心-平均血壓(TW Core Observation Average Blood Pressure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-averageBloodPressure-twcore.html)|
 |- Diastolic blood pressure|[臺灣核心-血壓(TW Core Observation Blood Pressure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)|
 |- Systolic blood pressure|[臺灣核心-血壓(TW Core Observation Blood Pressure)](https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Observation-bloodPressure-twcore.html)|
