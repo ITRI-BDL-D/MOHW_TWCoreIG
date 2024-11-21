@@ -1790,6 +1790,11 @@
 				<generation value="markdown" />
 			</page>
 			<page>
+				<nameUrl value="TWCDI.html" />
+				<title value="TWCDI" />
+				<generation value="markdown" />
+			</page>
+			<page>
 				<nameUrl value="downloads.html" />
 				<title value="結構定義、TWCDI與範例檔下載頁" />
 				<generation value="markdown" />
