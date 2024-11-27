@@ -1,15 +1,33 @@
+<style>
+  table {
+    border: 1.5px solid #d1d9e0;
+    border-collapse: collapse;
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #d1d9e0;
+    padding: 10px;
+    text-align: left;
+  }
+  th {
+    background-color: #f6f8fa;
+  }
+  td:first-child {
+    width: 500px;
+  }
+
+</style>
+
 # **TWCDI資料元素與TW Core Profiles之對應關係與使用**
 TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核心資料互通性(TWCDI)應用需求。TWCDI和TW Core是互補的存在，TWCDI定義高階資料要求，TW Core則提供詳細的基於FHIR 的設定檔(Profiles)，以滿足這些要求。
 - TWCDI資料類別和元素名稱可能與TW Core設定檔(Profile)名稱和元素名稱不同。
 - 並非每個TWCDI資料類別和元素都對應到單一設定檔(Profile)。
 - 許多TW Core Profile元素不會完全對應到TWCDI資料類別和元素，因為TW Core的用途更為廣泛，並且需要額外的TW Core元素來實現FHIR。
 
-1. **與接觸某種物質相關的有害或不良的生理反應：**
+#### 1. **與接觸某種物質相關的有害或不良的生理反應：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left">
@@ -63,12 +81,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
   </tbody>
 </table>
 
-2. **有關參與或預計參與患者護理的人員資訊：**
+#### 2. **有關參與或預計參與患者護理的人員資訊：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Care Team Members</strong></th>
@@ -191,12 +206,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
   </tbody>
 </table>
 
-3. **描述性患者臨床資料：**
+#### 3. **描述性患者臨床資料：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Clinical Notes</strong></th>
@@ -290,12 +302,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
   </tbody>
 </table>
 
-4. **進行非影像和非實驗室測試，得出針對患者的結構化或非結構化結果，以促進病情的診斷和管理：**
+#### 4. **進行非影像和非實驗室測試，得出針對患者的結構化或非結構化結果，以促進病情的診斷和管理：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Clinical Tests</strong></th>
@@ -354,12 +363,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-5. **產生需要具有資格的專業人士解讀的醫學影像測試：**
+#### 5. **產生需要具有資格的專業人士解讀的醫學影像測試：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Diagnostic Imaging</strong></th>
@@ -435,12 +441,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
   </tbody>
 </table>
 
-6. **與醫療保健提供者和患者之間的互動相關的資訊：**
+#### 6. **與醫療保健提供者和患者之間的互動相關的資訊：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Encounter</strong></th>
@@ -511,12 +514,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-7. **可用服務或資源的實體位置：**
+#### 7. **可用服務或資源的實體位置：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Facility Information</strong></th>
@@ -560,12 +560,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-8. **目標：**
+#### 8. **目標：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Goals and Preferences</strong></th>
@@ -620,12 +617,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-9. **與個人醫療保險範圍相關的資料：**
+#### 9. **與個人醫療保險範圍相關的資料：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Health Insurance Information</strong></th>
@@ -721,12 +715,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-10. **對患者、患者家屬或患者的醫療保健提供者感興趣、重要性或擔憂的健康相關問題進行評估，以識別需求、問題或狀況：**
+#### 10. **對患者、患者家屬或患者的醫療保健提供者感興趣、重要性或擔憂的健康相關問題進行評估，以識別需求、問題或狀況：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Health Status Assessments</strong></th>
@@ -1010,15 +1001,12 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 
 
 
-11. **疫苗接種記錄：**
+#### 11. **疫苗接種記錄：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
-      <th align="left"><strong>Immunizations</strong></th>
+      <th align="left" style="width: 500px"><strong>Immunizations</strong></th>
       <th align="left">
         <a
           href="https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition-Immunization-twcore.html"
@@ -1030,12 +1018,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-12. **用於醫療目的的儀器、機器、器具、植入物、軟體或其他物品：**
+#### 12. **用於醫療目的的儀器、機器、器具、植入物、軟體或其他物品：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Medical Devices</strong></th>
@@ -1063,12 +1048,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-13. **分析臨床樣本以獲得有關患者健康的資訊：**
+#### 13. **分析臨床樣本以獲得有關患者健康的資訊：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Laboratory</strong></th>
@@ -1221,12 +1203,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-14. **用於診斷、治癒、緩解、治療或預防疾病的藥物：**
+#### 14. **用於診斷、治癒、緩解、治療或預防疾病的藥物：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Medications</strong></th>
@@ -1328,12 +1307,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-15. **用於對個人進行分類以進行識別、記錄匹配和其他目的的資料：**
+#### 15. **用於對個人進行分類以進行識別、記錄匹配和其他目的的資料：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Patient Demographics</strong></th>
@@ -1511,12 +1487,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
   </tbody>
 </table>
 
-16. **指導患者治療的結論和工作假設以及未來治療的建議：**
+#### 16. **指導患者治療的結論和工作假設以及未來治療的建議：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Patient Summary and Plan</strong></th>
@@ -1542,12 +1515,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-17. **診斷或就醫的原因：**
+#### 17. **診斷或就醫的原因：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Problems</strong></th>
@@ -1592,12 +1562,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 
 
 
-18. **作為提供護理的一部分，為患者或在患者身上進行的活動：**
+#### 18. **作為提供護理的一部分，為患者或在患者身上進行的活動：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Procedures</strong></th>
@@ -1688,12 +1655,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-19. **元資料(metadata)或有關資料的額外資訊，涉及資料創建者和創建時間(電子/數位簽章)：**
+#### 19. **元資料(metadata)或有關資料的額外資訊，涉及資料創建者和創建時間(電子/數位簽章)：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Provenance</strong></th>
@@ -1728,12 +1692,9 @@ TW Core IG後續將會定期更新該實作指引，以滿足後續的台灣核�
 </table>
 
 
-20. **患者的生理測量，顯示身體維持生命功能的狀態：**
+#### 20. **患者的生理測量，顯示身體維持生命功能的狀態：**
 
-<table
-  style="border: 3px black solid; border-collapse: collapse; width: 100%"
-  border="1"
->
+<table>
   <thead>
     <tr>
       <th align="left"><strong>Vital Signs</strong></th>
