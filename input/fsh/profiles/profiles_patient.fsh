@@ -6,9 +6,9 @@ Parent:         Patient
 Id:             Patient-twcore
 Title:          "TW Core Patient"
 Description:    "
-此臺灣核心-病人（TW Core Patient) Profile說明本IG如何進一步定義FHIR的Patient Resource以呈現基本資料。"
-* ^version = "0.2.3"
-* address only TWCoreAddress
+此臺灣核心-病人（TW Core Patient） Profile說明本IG如何進一步定義FHIR的Patient Resource以呈現基本資料。"
+* ^version = "0.3.2"
+* address only AddressTW
 * address MS
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
@@ -19,6 +19,9 @@ Description:    "
 * extension[nationality] ^short = "病人所屬國籍"
 
 * identifier 1..* MS
+* identifier.type only CodeableConceptTW
+* identifier.system 1..1
+* identifier.value 1..1
 //* identifier ^slicing.discriminator.type = #pattern
 //* identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.discriminator[0].type = #value
@@ -54,8 +57,10 @@ Description:    "
 * identifier[idCardNumber].type.coding.code MS
 * identifier[idCardNumber].type.coding.system MS
 * identifier[idCardNumber].type.coding.display MS
+* identifier[idCardNumber] obeys id-card-number
+
 * identifier[passportNumber].system 1.. MS
-* identifier[passportNumber].system = "http://www.boca.gov.tw"
+* identifier[passportNumber].system = "http://hl7.org/fhir/sid/passport-TWN"
 * identifier[passportNumber].use MS
 * identifier[passportNumber].use = #official
 * identifier[passportNumber].type only CodeableConceptTW
@@ -105,6 +110,8 @@ Description:    "
 * identifier[idCardNumber].assigner only Reference(TWCoreOrganization)
 * identifier[passportNumber].assigner only Reference(TWCoreOrganization)
 * identifier[residentNumber].assigner only Reference(TWCoreOrganization)
+* identifier.assigner only Reference(TWCoreOrganization)
+
 * active MS
 * name ^slicing.discriminator.type = #pattern
 * name ^slicing.discriminator.path = "use"
@@ -185,7 +192,7 @@ Description:    "
 * contact.telecom.value 1..1 MS
 * contact.telecom.use MS
 * contact.period MS
-* contact.address only TWCoreAddress
+* contact.address only AddressTW
 * contact.organization only Reference(TWCoreOrganization)
 * communication MS
 * communication.language only CodeableConceptTW
@@ -193,7 +200,7 @@ Description:    "
 * generalPractitioner only Reference(TWCoreOrganization  or TWCorePractitioner or TWCorePractitionerRole)
 * managingOrganization MS
 * managingOrganization only Reference(TWCoreOrganization)
-* link.other only Reference(TWCorePatient  or RelatedPerson)
+* link.other only Reference(TWCorePatient  or TWCoreRelatedPerson)
 
 * . ^short = "接受健康照護服務的個人或動物之資訊"
 * . ^definition = "關於接受照護或其他健康相關服務的個人或動物的人口統計學和其他行政資訊。"
@@ -521,7 +528,7 @@ Description:    "
 * identifier[medicalRecord].type.text ^requirements = "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。"
 * identifier[medicalRecord].type.text ^comment = "很多時候，此文字表述與其中一個代碼的顯示名稱相同。"
 
-* identifier[medicalRecord].system ^short = "身份識別碼（identifier）的命名空間（namespace），可至[twTerminology](https://twcore.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0)申請或查詢命名系統。"
+* identifier[medicalRecord].system ^short = "身份識別碼（identifier）的命名空間（namespace），可至[twTerminology](https://fhir.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0)申請或查詢命名系統。"
 * identifier[medicalRecord].system ^definition = "建立值的命名空間－即一個描述一組值的唯一URL"
 * identifier[medicalRecord].system ^requirements = "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。"
 * identifier[medicalRecord].system ^comment = "Identifier.system總是區分大小寫"
@@ -817,7 +824,7 @@ pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alp
 * contact.period ^definition = "與此病人有關的聯絡人或機構的有效聯絡期"
 * communication ^short = "向病人說明健康狀態時所使用的語言"
 * communication ^definition = "可用於與病人溝通其健康狀況的語言。"
-* communication ^requirements = "如果病人不會說當地語言，可能需要翻譯，因此，對於病人和其他相關人員來說，所講的語言和熟練程度都是需要記錄的重要內容。"
+* communication ^requirements = "如果病人不會說當地語言，可能需要翻譯，因此，對於病人和其他相關人士來說，所講的語言和熟練程度都是需要記錄的重要內容。"
 * communication ^comment = "如果沒有指定語言，這意味著預設使用當地語言。如果你需要多種模式的熟練程度，那麼你需要多個Patient.Communication關聯。對於動物來說，語言不是相關的欄位，應該不存在於實例中。如果病人不講預設的當地語言，那麼可以使用 「（Interpreter Required Standard）需要口譯員」來明確聲明需要口譯員。"
 
 /*
@@ -868,8 +875,3 @@ pat-cnt-2or3-char：如果有國家名，則必須（SHALL）從[ISO Country Alp
 * link.type ^binding.description = "連結的型別；應填入所綁定值集中的其中一個代碼。"
 * link.type ^definition = "這個Patient resource與另一個Patient resource之間的連結型別"
 
-Invariant:   tw-core-1
-Description: "Patient.name.text or Patient.name.family or both SHALL be present"
-Expression:  "text.exists() or family.exists()"
-Severity:    #error
-XPath:       "f:text or f:given"

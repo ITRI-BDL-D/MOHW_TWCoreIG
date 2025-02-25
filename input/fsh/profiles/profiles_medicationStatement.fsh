@@ -2,8 +2,8 @@ Profile: TWCoreMedicationStatement
 Parent:  MedicationStatement
 Id:  MedicationStatement-twcore
 Title: "TW Core  MedicationStatement"
-Description: "此臺灣核心-用藥聲明（TW Core  MedicationStatement) Profile說明本IG如何進一步定義FHIR的MedicationStatement Resource以呈現用藥聲明的詳細資料。"
-* ^version = "0.2.3"
+Description: "此臺灣核心-用藥聲明（TW Core  MedicationStatement） Profile說明本IG如何進一步定義FHIR的MedicationStatement Resource以呈現用藥聲明的詳細資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * identifier and context and status and category and medication[x] and subject and effective[x] and dosage and dosage.text and dosage.timing and dosage.sequence and dosage.patientInstruction and dosage.route and dosage.doseAndRate.dose[x] and dosage.doseAndRate.rate[x] MS 
@@ -16,11 +16,11 @@ Description: "此臺灣核心-用藥聲明（TW Core  MedicationStatement) Profi
 * medication[x] only CodeableConceptTW or Reference(TWCoreMedication)
 * reasonCode only CodeableConceptTW
 * medicationReference only Reference(TWCoreMedication)
-* basedOn only Reference(TWCoreMedicationRequest or CarePlan or ServiceRequest)
+* basedOn only Reference(TWCoreMedicationRequest or TWCoreCarePlan or TWCoreServiceRequest)
 * partOf only Reference(MedicationAdministration or TWCoreMedicationDispense or TWCoreMedicationStatement or TWCoreProcedure or TWCoreObservationLaboratoryResult)
 * subject only Reference(TWCorePatient or Group)
 * context only Reference(TWCoreEncounter or EpisodeOfCare)
-* informationSource only Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or RelatedPerson or TWCoreOrganization)
+* informationSource only Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or TWCoreRelatedPerson or TWCoreOrganization)
 * reasonReference only Reference(TWCoreCondition or TWCoreObservationLaboratoryResult or TWCoreDiagnosticReport)
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
 * medicationCodeableConcept.coding ^slicing.discriminator.path = "$this"

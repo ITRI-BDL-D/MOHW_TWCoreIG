@@ -4,10 +4,10 @@ Profile:        TWCoreProcedure
 Parent:         Procedure
 Id:             Procedure-twcore
 Title:          "TW Core Procedure"
-Description:    "此臺灣核心-處置或手術（TW Core Procedure) Profile說明本IG如何進一步定義FHIR的Procedure Resource以呈現處置或手術基本資料。
+Description:    "此臺灣核心-處置或手術（TW Core Procedure） Profile說明本IG如何進一步定義FHIR的Procedure Resource以呈現處置或手術基本資料。
 
 "
-* ^version = "0.2.3"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * status and subject and performed[x] and asserter and  bodySite MS
@@ -15,13 +15,16 @@ Description:    "此臺灣核心-處置或手術（TW Core Procedure) Profile說
 * partOf only Reference(TWCoreProcedure or TWCoreObservationLaboratoryResult or MedicationAdministration)
 * encounter only Reference(TWCoreEncounter)
 * subject only Reference(TWCorePatient)
-* recorder only Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or RelatedPerson)
-* asserter only Reference(TWCorePatient or RelatedPerson or TWCorePractitioner or TWCorePractitionerRole)
-* performer.actor only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or RelatedPerson or Device)
+* recorder only Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or TWCoreRelatedPerson)
+* asserter only Reference(TWCorePatient or TWCoreRelatedPerson or TWCorePractitioner or TWCorePractitionerRole)
+* performer.actor only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or TWCoreRelatedPerson or Device)
 * performer.onBehalfOf only Reference(TWCoreOrganization)
-* reasonReference only Reference(TWCoreCondition or TWCoreObservationLaboratoryResult or TWCoreProcedure or DiagnosticReport or DocumentReference)
+* reasonReference only Reference(TWCoreCondition or TWCoreObservationLaboratoryResult or TWCoreProcedure or TWCoreDiagnosticReport or TWCoreDocumentReference)
 * complicationDetail only Reference(TWCoreCondition)
 * location only Reference(TWCoreLocation)
+* basedOn only Reference(TWCoreCarePlan or TWCoreServiceRequest)
+* report only Reference(TWCoreDiagnosticReport or TWCoreDocumentReference or TWCoreComposition)
+* usedReference only Reference(Device or TWCoreMedication or Substance)
 * code 1..1 MS
 * code.text 0..1 MS
 * code.coding ^slicing.discriminator.type = #pattern

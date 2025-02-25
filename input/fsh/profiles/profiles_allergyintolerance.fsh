@@ -2,15 +2,15 @@ Profile: TWCoreAllergyIntolerance
 Parent: AllergyIntolerance
 Id: AllergyIntolerance-twcore
 Title: "TW Core AllergyIntolerance"
-Description: "此臺灣核心-過敏或不耐症（TW Core AllergyIntolerance) Profile說明本IG如何進一步定義FHIR的AllergyIntolerance Resource以呈現過敏與不耐症的詳細資料。"
-* ^version = "0.2.3"
+Description: "此臺灣核心-過敏或不耐症（TW Core AllergyIntolerance） Profile說明本IG如何進一步定義FHIR的AllergyIntolerance Resource以呈現過敏與不耐症的詳細資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * clinicalStatus and verificationStatus and code and patient and reaction and reaction.manifestation and recordedDate and recorder and note MS
 * patient only Reference(TWCorePatient)
 * encounter only Reference(TWCoreEncounter)
-* recorder only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or RelatedPerson)
-* asserter only Reference(TWCorePatient or RelatedPerson or TWCorePractitioner or TWCorePractitionerRole)
+* recorder only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or TWCoreRelatedPerson)
+* asserter only Reference(TWCorePatient or TWCoreRelatedPerson or TWCorePractitioner or TWCorePractitionerRole)
 * clinicalStatus only CodeableConceptTW 
 * verificationStatus only CodeableConceptTW 
 * code only CodeableConceptTW 

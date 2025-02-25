@@ -1,15 +1,22 @@
 Profile:        TWCoreObservationBloodPressure
-Parent:         TWCoreObservationVitalSigns
+Parent:         http://hl7.org/fhir/StructureDefinition/bp
 Id:             Observation-bloodPressure-twcore
 Title:          "TW Core Observation Blood Pressure"
-Description:    "此臺灣核心-血壓（TW Core Observation Blood Pressure) Profile說明本IG如何進一步定義臺灣核心-生命體徵（TW Core Observation Vital Signs) Profile以呈現血壓資料。"
-* ^version = "0.2.3"
+Description:    "此臺灣核心-血壓（TW Core Observation Blood Pressure） Profile說明本IG如何進一步定義臺灣核心-生命體徵（TW Core Observation Vital Signs） Profile以呈現血壓資料。"
+* ^version = "0.3.2"
 * code only CodeableConceptTW
-* code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#85354-9
-* code MS
+//* code = http://loinc.org#85354-9
+//* code MS
+* code.coding 1..1
 * code ^short = "血壓"
-* component ..* MS
-* component ^slicing.discriminator.type = #pattern
+* component 2..* MS
+
+* component[SystolicBP].code.coding 1..*
+* component[SystolicBP].code ^short = "收縮壓代碼"
+* component[DiastolicBP].code.coding 1..*
+* component[DiastolicBP].code ^short = "舒張壓代碼"
+
+/* component ^slicing.discriminator.type = #pattern
 * component ^slicing.discriminator.path = "code"
 * component ^slicing.ordered = false
 * component ^slicing.rules = #open
@@ -18,7 +25,7 @@ Description:    "此臺灣核心-血壓（TW Core Observation Blood Pressure) Pr
     Diastolic 1..1 MS
 * component[Systolic] ^short = "收縮壓"
 * component[Systolic].code 1..1 MS
-* component[Systolic].code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#8480-6
+* component[Systolic].code = http://loinc.org#8480-6
 * component[Systolic].code ^short = "收縮壓代碼"
 * component[Systolic].value[x] only Quantity
 * component[Systolic].valueQuantity only Quantity
@@ -35,7 +42,7 @@ Description:    "此臺灣核心-血壓（TW Core Observation Blood Pressure) Pr
 * component[Systolic].valueQuantity.code = #mm[Hg] (exactly)
 * component[Diastolic] ^short = "舒張壓"
 * component[Diastolic].code 1..1 MS
-* component[Diastolic].code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#8462-4
+* component[Diastolic].code = http://loinc.org#8462-4
 * component[Diastolic].code ^short = "舒張壓代碼"
 * component[Diastolic].value[x] only Quantity
 * component[Diastolic].valueQuantity only Quantity
@@ -49,6 +56,11 @@ Description:    "此臺灣核心-血壓（TW Core Observation Blood Pressure) Pr
 * component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org" (exactly)
 * component[Diastolic].valueQuantity.code 1..1 MS
 * component[Diastolic].valueQuantity.code only code
-* component[Diastolic].valueQuantity.code = #mm[Hg] (exactly)
+* component[Diastolic].valueQuantity.code = #mm[Hg] (exactly)*/
 * bodySite from http://hl7.org/fhir/ValueSet/body-site (extensible)
 * method from http://hl7.org/fhir/ValueSet/observation-methods (extensible)
+* basedOn only Reference(TWCoreCarePlan or DeviceRequest or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or TWCoreServiceRequest)
+* partOf only Reference(MedicationAdministration or TWCoreMedicationDispense or TWCoreMedicationStatement or TWCoreProcedure or TWCoreImmunization or TWCoreImagingStudy)
+* subject only Reference(TWCorePatient)
+* hasMember only Reference(TWCoreQuestionnaireResponse or MolecularSequence or TWCoreObservationVitalSigns)
+* derivedFrom only Reference(TWCoreDocumentReference or TWCoreImagingStudy or TWCoreMedia or TWCoreQuestionnaireResponse or TWCoreObservationVitalSigns or MolecularSequence)

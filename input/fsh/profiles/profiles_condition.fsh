@@ -8,16 +8,16 @@ Profile:        TWCoreCondition
 Parent:         Condition
 Id:             Condition-twcore
 Title:          "TW Core Condition"
-Description:    "此臺灣核心-病情、問題或診斷（TW Core Condition) Profile說明本IG如何進一步定義FHIR的Condition Resource以呈現有關病情、問題或診斷的詳細資料。
+Description:    "此臺灣核心-病情、問題或診斷（TW Core Condition） Profile說明本IG如何進一步定義FHIR的Condition Resource以呈現有關病情、問題或診斷的詳細資料。
 "
-* ^version = "0.2.3"
+* ^version = "0.3.2"
 * subject only Reference(TWCorePatient or Group)
 * encounter only Reference(TWCoreEncounter)
 * bodySite MS
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
-* recorder only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or RelatedPerson)
-* asserter only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or RelatedPerson)
+* recorder only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or TWCoreRelatedPerson)
+* asserter only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCorePatient or TWCoreRelatedPerson)
 * stage.assessment only Reference(ClinicalImpression or TWCoreDiagnosticReport or TWCoreObservationLaboratoryResult or TWCoreObservationVitalSigns)
 
 * clinicalStatus only CodeableConceptTW

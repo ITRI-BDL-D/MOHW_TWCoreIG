@@ -2,8 +2,8 @@ Profile:        TWCoreObservationVitalSigns
 Parent:         http://hl7.org/fhir/StructureDefinition/vitalsigns
 Id:             Observation-vitalSigns-twcore
 Title:          "TW Core Observation Vital Signs"
-Description:    "此臺灣核心-生命體徵（TW Core Observation Vital Signs) Profile說明本IG如何進一步定義FHIR的Vital Signs Profile以呈現生命體徵資料。"
-* ^version = "0.2.3"
+Description:    "此臺灣核心-生命體徵（TW Core Observation Vital Signs） Profile說明本IG如何進一步定義FHIR的Vital Signs Profile以呈現生命體徵資料。"
+* ^version = "0.3.2"
 * status MS
 * category ..* MS
 * category only CodeableConceptTW
@@ -24,16 +24,16 @@ Description:    "此臺灣核心-生命體徵（TW Core Observation Vital Signs)
 * category[VSCat].coding.code only code
 * category[VSCat].coding.code = #vital-signs (exactly)
 * code MS
-* code from TWVitalSigns
+* code from TWVitalSigns (extensible)
 * code.text 0..1 MS
 * subject only Reference(TWCorePatient)
 * subject MS
 * encounter only Reference(TWCoreEncounter)
-* basedOn only Reference(CarePlan or DeviceRequest or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or ServiceRequest)
-* partOf only Reference(MedicationAdministration or TWCoreMedicationDispense or TWCoreMedicationStatement or TWCoreProcedure or Immunization or TWCoreImagingStudy)
+* basedOn only Reference(TWCoreCarePlan or DeviceRequest or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or TWCoreServiceRequest)
+* partOf only Reference(MedicationAdministration or TWCoreMedicationDispense or TWCoreMedicationStatement or TWCoreProcedure or TWCoreImmunization or TWCoreImagingStudy)
 * specimen only Reference(TWCoreSpecimen)
-* derivedFrom only Reference(TWCoreDocumentReference or TWCoreImagingStudy or TWCoreMedia or QuestionnaireResponse or TWCoreObservationVitalSigns or MolecularSequence)
-* hasMember only Reference(TWCoreObservationVitalSigns or QuestionnaireResponse or MolecularSequence)
+* derivedFrom only Reference(TWCoreDocumentReference or TWCoreImagingStudy or TWCoreMedia or TWCoreQuestionnaireResponse or TWCoreObservationVitalSigns or MolecularSequence)
+* hasMember only Reference(TWCoreObservationVitalSigns or TWCoreQuestionnaireResponse or MolecularSequence)
 * effective[x] 1..1
 * effective[x] only dateTime or Period
 * effective[x] MS
@@ -41,7 +41,7 @@ Description:    "此臺灣核心-生命體徵（TW Core Observation Vital Signs)
 * effective[x] ^type.extension.valueBoolean = true
 //* value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
 * performer MS
-* performer only Reference(TWCorePractitioner or TWCoreOrganization or TWCorePatient or TWCorePractitionerRole or CareTeam)
+* performer only Reference(TWCorePractitioner or TWCoreOrganization or TWCorePatient or TWCorePractitionerRole or TWCoreCareTeam)
 * value[x] MS
 * value[x] from http://hl7.org/fhir/ValueSet/ucum-vitals-common (extensible)
 
@@ -49,7 +49,7 @@ Description:    "此臺灣核心-生命體徵（TW Core Observation Vital Signs)
 * value[x] ^type.extension.valueBoolean = true
 * component MS
 * component.code MS
-* component.code from TWVitalSigns
+* component.code from TWVitalSigns (extensible)
 //* component.valueQuantity ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 //* component.valueQuantity ^type.extension.valueBoolean = true
 //* component.value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period

@@ -2,8 +2,8 @@ Profile: TWCoreMedia
 Parent: Media
 Id: Media-twcore
 Title: "TW Core Media"
-Description: "此臺灣核心-多媒體(TW Core Media) Profile說明本IG如何進一步定義FHIR的Media Resource以呈現多媒體的詳細資料。"
-* ^version = "0.2.3"
+Description: "此臺灣核心-多媒體（TW Core Media） Profile說明本IG如何進一步定義FHIR的Media Resource以呈現多媒體的詳細資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * subject MS
@@ -14,7 +14,7 @@ Description: "此臺灣核心-多媒體(TW Core Media) Profile說明本IG如何�
 * reasonCode only CodeableConceptTW
 * subject only Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or Group or Device or TWCoreSpecimen or TWCoreLocation)
 * encounter only Reference(TWCoreEncounter)
-* operator only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or CareTeam or TWCorePatient or  Device or RelatedPerson)
+* operator only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCoreCareTeam or TWCorePatient or  Device or TWCoreRelatedPerson)
 * type from MediaType (extensible)
 * view from http://hl7.org/fhir/ValueSet/media-view (extensible)
 * reasonCode from http://hl7.org/fhir/ValueSet/procedure-reason (extensible)
@@ -98,7 +98,7 @@ Description: "此臺灣核心-多媒體(TW Core Media) Profile說明本IG如何�
 * created[x] ^definition = "多媒體收集的日期和時間"
 
 * issued ^short = "此版本提供的日期/時間"
-* issued ^definition = "當一份多媒體資料（比如影像、文件等）經過專業人士的審查之後，確定無誤或達到一定標準，便會選擇一個時間點，把這份經過審查的多媒體版本提供給其他醫療專業人員或相關人員使用。這個「日期和時間」就是指這份多媒體資料被正式認可並開放給相關人員使用的具體時刻。"
+* issued ^definition = "當一份多媒體資料（比如影像、文件等）經過專業人士的審查之後，確定無誤或達到一定標準，便會選擇一個時間點，把這份經過審查的多媒體版本提供給其他醫療專業人員或相關人士使用。這個「日期和時間」就是指這份多媒體資料被正式認可並開放給相關人士使用的具體時刻。"
 * issued ^comment = "它可能與resource本身的最後更新時間相同。但對於那些確實需要對某些更新進行審查和驗證的Observations，如果更新是非臨床顯著的，則不需要對新版本進行再次審查和驗證，因此它也可能與resource本身的最後更新時間不同。"
 
 * operator ^short = "產生影像的人"

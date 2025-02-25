@@ -15,6 +15,17 @@
 - [_id](SearchParameter-Bundle-id.html)
 - [identifier](SearchParameter-Bundle-identifier.html)
 
+### CarePlan
+- [patient](SearchParameter-CarePlan-patient.html)
+- [category](SearchParameter-CarePlan-category.html)
+- [date](SearchParameter-CarePlan-date.html)
+- [status](SearchParameter-CarePlan-status.html)
+
+### CareTeam
+- [patient](SearchParameter-CareTeam-patient.html)
+- [status](SearchParameter-CareTeam-status.html)
+- [role](SearchParameter-CareTeam-role.html)
+
 ### Composition
 - [_id](SearchParameter-Composition-id.html)
 - [status](SearchParameter-Composition-status.html)
@@ -29,6 +40,14 @@
 - [onset-date](SearchParameter-Condition-onset-date.html)
 - [abatement-date](SearchParameter-Condition-abatement-date.html)
 - [severity](SearchParameter-Condition-severity.html)
+
+### Coverage
+- [patient](SearchParameter-Coverage-patient.html)
+
+### Device
+- [patient](SearchParameter-Device-patient.html)
+- [type](SearchParameter-Device-type.html)
+- [status](SearchParameter-Device-status.html)
 
 ### DiagnosticReport
 - [_id](SearchParameter-DiagnosticReport-id.html)
@@ -52,12 +71,23 @@
 - [subject](SearchParameter-Encounter-subject.html)
 - [status](SearchParameter-Encounter-status.html)
 
+### Goal
+- [patient](SearchParameter-Goal-patient.html)
+- [lifecycle-status](SearchParameter-Goal-lifecycle-status.html)
+- [target-date](SearchParameter-Goal-target-date.html)
+- [description](SearchParameter-Goal-description.html)
+
 ### ImagingStudy
 - [_id](SearchParameter-ImagingStudy-id.html)
 - [status](SearchParameter-ImagingStudy-status.html)
 - [subject](SearchParameter-ImagingStudy-subject.html)
 - [encounter](SearchParameter-ImagingStudy-encounter.html)
 - [started](SearchParameter-ImagingStudy-started.html)
+
+### Immunization
+- [patient](SearchParameter-Immunization-patient.html)
+- [date](SearchParameter-Immunization-date.html)
+- [status](SearchParameter-Immunization-status.html)
 
 ### Location
 - [_id](SearchParameter-Location-id.html)
@@ -107,6 +137,8 @@
 - [performer](SearchParameter-Observation-performer.html)
 - [status](SearchParameter-Observation-status.html)
 - [subject](SearchParameter-Observation-subject.html)
+- [patient](SearchParameter-Observation-patient.html)
+- [_lastUpdated](SearchParameter-Observation-lastupdated.html)
 
 ### Organization 
 - [_id](SearchParameter-Organization-id.html)
@@ -137,6 +169,31 @@
 - [status](SearchParameter-Procedure-status.html)
 - [subject](SearchParameter-Procedure-subject.html)
 - [date](SearchParameter-Procedure-date.html)
+
+#### Provenance
+- [_id](SearchParameter-Provenance-id.html)
+- [patient](SearchParameter-Provenance-patient.html)
+
+
+### QuestionnaireResponse
+- [_id](SearchParameter-QuestionnaireResponse-id.html)
+- [patient](SearchParameter-QuestionnaireResponse-patient.html)
+- [status](SearchParameter-QuestionnaireResponse-status.html)
+- [authored](SearchParameter-QuestionnaireResponse-authored.html)
+- [questionnaire](SearchParameter-QuestionnaireResponse-questionnaire.html)
+
+### RelatedPerson
+- [_id](SearchParameter-RelatedPerson-id.html)
+- [patient](SearchParameter-RelatedPerson-patient.html)
+- [name](SearchParameter-RelatedPerson-name.html)
+
+### ServiceRequest
+- [_id](SearchParameter-ServiceRequest-id.html)
+- [patient](SearchParameter-ServiceRequest-patient.html)
+- [category](SearchParameter-ServiceRequest-category.html)
+- [authored](SearchParameter-ServiceRequest-authored.html)
+- [status](SearchParameter-ServiceRequest-status.html)
+- [code](SearchParameter-ServiceRequest-code.html)
 
 ### Specimen
 - [_id](SearchParameter-Specimen-id.html)

@@ -4,8 +4,8 @@ Id:             Practitioner-twcore
 Title:          "TW Core Practitioner"
 Description:    "tifier:residentNumber欄位的identifier.system改為 = http://www.immigration.gov.tw。  
 
-此臺灣核心-健康照護服務提供者（TW Core Practitioner) Profile說明本IG如何進一步定義FHIR的Practitioner Resource以呈現健康照護服務提供者基本資料。"
-* ^version = "0.2.3"
+此臺灣核心-健康照護服務提供者（TW Core Practitioner） Profile說明本IG如何進一步定義FHIR的Practitioner Resource以呈現健康照護服務提供者基本資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * communication ^example.label = "Value"
@@ -49,8 +49,9 @@ Description:    "tifier:residentNumber欄位的identifier.system改為 = http://
 * identifier[idCardNumber].type.coding.code MS
 * identifier[idCardNumber].type.coding.system MS
 * identifier[idCardNumber].type.coding.display MS
+* identifier[idCardNumber] obeys id-card-number
 * identifier[passportNumber].system 1.. MS
-* identifier[passportNumber].system = "http://www.boca.gov.tw"
+* identifier[passportNumber].system = "http://hl7.org/fhir/sid/passport-TWN"
 * identifier[passportNumber].use MS
 * identifier[passportNumber].use = #official
 * identifier[passportNumber].type only CodeableConceptTW
@@ -95,6 +96,7 @@ Description:    "tifier:residentNumber欄位的identifier.system改為 = http://
 * identifier[passportNumber].assigner only Reference(TWCoreOrganization)
 * identifier[residentNumber].assigner only Reference(TWCoreOrganization)
 * identifier[medicalLicenseNumber].assigner only Reference(TWCoreOrganization)
+* identifier.assigner only Reference(TWCoreOrganization)
 
 * qualification.issuer only Reference(TWCoreOrganization)
 * active and address MS
@@ -119,12 +121,14 @@ Description:    "tifier:residentNumber欄位的identifier.system改為 = http://
 * telecom.value 1..1 MS
 * telecom.use MS
 * telecom.period MS
-* address only TWCoreAddress
+* address only AddressTW
 * gender MS
 * birthDate MS
 * photo MS
 * qualification.code from TWHealthProfessionalSCT (extensible)
 * identifier.type only CodeableConceptTW
+* identifier.system 1..1
+* identifier.value 1..1
 * qualification.code only CodeableConceptTW
 * communication only CodeableConceptTW
 
@@ -390,7 +394,7 @@ Description:    "tifier:residentNumber欄位的identifier.system改為 = http://
 * identifier[medicalLicenseNumber].type.text ^definition = "輸入資料的使用者所見／所選／所說的人類可讀文字表述，和（或）其代表使用者的預期含義。"
 * identifier[medicalLicenseNumber].type.text ^requirements = "專門術語中的代碼並不總是能捕捉人類使用的細微差別的正確意義，或者根本就沒有合適的代碼；這些情況下，文字表述被用來捕捉來源的全部意義。"
 * identifier[medicalLicenseNumber].type.text ^comment = "很多時候，此文字表述與其中一個代碼的顯示名稱相同。"
-* identifier[medicalLicenseNumber].system ^short = "身份識別碼（identifier）的命名空間（namespace），可至 [twTerminology](https://twcore.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0) 申請或查詢命名系統。"
+* identifier[medicalLicenseNumber].system ^short = "身份識別碼（identifier）的命名空間（namespace），可至 [twTerminology](https://fhir.mohw.gov.tw/ts/namingsystem.jsp?status=active&amp;type=0) 申請或查詢命名系統。"
 * identifier[medicalLicenseNumber].system ^definition = "建立值的命名空間－即一個描述一組值的唯一URL"
 * identifier[medicalLicenseNumber].system ^requirements = "有許多識別碼的集合。為了進行兩個識別碼的對應，我們需要知道我們處理的是哪一組。系統指明了一個特定的唯一識別碼集。"
 * identifier[medicalLicenseNumber].system ^comment = "Identifier.system總是區分大小寫"

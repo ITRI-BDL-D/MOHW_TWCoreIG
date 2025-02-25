@@ -1,7 +1,3 @@
-Alias: $sct = http://snomed.info/sct
-Alias: $Patient-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $device-kind = http://hl7.org/fhir/ValueSet/device-kind
-
 Instance: dev-example
 InstanceOf: TWCoreImplantableDevice
 Usage: #example
@@ -12,5 +8,5 @@ Usage: #example
 * lotNumber = "7654321D"
 * serialNumber = "10987654d321"
 * type.coding.version = "http://snomed.info/sct/731000124108"
-* type.coding = $sct#468063009 "Coated femoral stem prosthesis, modular"
-* patient =  Reference(Patient/pat-example)
+* type.coding = http://snomed.info/sct#468063009 "Coated femoral stem prosthesis, modular"
+* patient = Reference(Patient/pat-example)

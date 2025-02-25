@@ -15,7 +15,7 @@ Usage: #example
 * identifier[medicalRecord].use = #official
 * identifier[medicalRecord].type.coding.system = "http://terminology.hl7.org/CodeSystem/v2-0203"
 * identifier[medicalRecord].type.coding.code = #MR
-* identifier[medicalRecord].system = "https://www.tph.mohw.gov.tw/"
+* identifier[medicalRecord].system = "https://www.tph.mohw.gov.tw"
 * identifier[medicalRecord].value = "8862168"
 * active = true
 * name.use = #official
@@ -38,8 +38,8 @@ Usage: #example
 * extension[=].extension.url = "code"
 * extension[=].extension.valueCodeableConcept = urn:iso:std:iso:3166#TW
 * address.country = "TW"
-* address.district = "大同區"
-* address.city = "臺北市"
+* address.district = "臺北市"
+* address.city = "大同區"
 * address.line = "承德路"
 * address.extension[0].url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/tw-section"
 * address.extension[=].valueString = "三段"
@@ -64,7 +64,7 @@ Usage: #example
 * maritalStatus.coding.system = "http://terminology.hl7.org/CodeSystem/v3-MaritalStatus"
 * maritalStatus.coding.code = #U
 * photo.contentType = #image/jpeg
-* photo.data = "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"
+//* photo.data = "R0lGODlhEwARAPcAAAAAAAAA/+9aAO+1AP/WAP/eAP/eCP/eEP/eGP/nAP/nCP/nEP/nIf/nKf/nUv/nWv/vAP/vCP/vEP/vGP/vIf/vKf/vMf/vOf/vWv/vY//va//vjP/3c//3lP/3nP//tf//vf///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////yH5BAEAAAEALAAAAAATABEAAAi+AAMIDDCgYMGBCBMSvMCQ4QCFCQcwDBGCA4cLDyEGECDxAoAQHjxwyKhQAMeGIUOSJJjRpIAGDS5wCDly4AALFlYOgHlBwwOSNydM0AmzwYGjBi8IHWoTgQYORg8QIGDAwAKhESI8HIDgwQaRDI1WXXAhK9MBBzZ8/XDxQoUFZC9IiCBh6wEHGz6IbNuwQoSpWxEgyLCXL8O/gAnylNlW6AUEBRIL7Og3KwQIiCXb9HsZQoIEUzUjNEiaNMKAAAA7"
 //* photo.url = "https://2.bp.blogspot.com/-v3yEwItkXKQ/VaMN_1Nx6TI/AAAAAAAAvhM/zDXN_eZw_UE/s800/youngwoman_42.png"
 * photo.url = "patient.png"
 * contact.relationship.coding.system = "http://terminology.hl7.org/CodeSystem/v3-RoleCode"
@@ -83,7 +83,7 @@ Usage: #example
 * text.status = #generated
 * text.div = "<div xmlns=\"http://www.w3.org/1999/xhtml\">
 	<h3>
-		<b>病人基本資料-身分證字號</b>
+		<b>病人基本資料-身分證字號及病歷號</b>
 	</h3>
 	<blockquote>
 		<p>
@@ -127,8 +127,8 @@ Usage: #example
 	<p>
 		<b>聯絡地址</b>：(103)臺北市大同區大有里19鄰承德路三段52巷6弄210號2樓B室<br />
 		<b>  郵遞區號（postalCode） [extension: <a href=\"StructureDefinition-tw-postal-code.html\">tw-postal-code</a>] </b>： <a href=\"CodeSystem-postal-code3-tw.html\">103</a> <br />
-		<b>  縣/市（city）</b>：臺北市 <br />
-		<b>  鄉/鎮/市/區（district）</b>：大同區 <br />
+		<b>  縣/市（district）</b>：臺北市 <br />
+		<b>  鄉/鎮/市/區（city）</b>：大同區 <br />
 		<b>  村(里)（village） [extension: <a href=\"StructureDefinition-tw-village.html\">tw-village</a>] </b>：大有里 <br />
 		<b>  鄰（neighborhood） [extension: <a href=\"StructureDefinition-tw-neighborhood.html\">tw-neighborhood</a>] </b>：19鄰 <br />
 		<b>  路/街（line）</b>：承德路 <br />

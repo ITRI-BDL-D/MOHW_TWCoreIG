@@ -2,14 +2,8 @@ Profile: TWCoreDiagnosticReport
 Parent: DiagnosticReport
 Id: DiagnosticReport-twcore
 Title: "TW Core DiagnosticReport"
-Description: "
-- 2024/5/29異動說明：  
-1. category欄位固定值=LAB拿掉，因實務專案可能有其他category。  
-2. subject欄位改為必填，以利實務專案使用。  
-3. code欄位加上「臺灣健保署2021年中文版ICD-10-PCS值集」的Slices，因實務專案會有此需求。  
-
-此臺灣核心-診斷報告（TW Core DiagnosticReport) Profile說明本IG如何進一步定義FHIR的DiagnosticReport Resource以呈現診斷報告。"
-* ^version = "0.2.3"
+Description: "此臺灣核心-診斷報告（TW Core DiagnosticReport） Profile說明本IG如何進一步定義FHIR的DiagnosticReport Resource以呈現診斷報告。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * status and category and code and subject and effective[x] and issued MS
@@ -31,7 +25,7 @@ Description: "
     TW2021ICD10PCS 0..1 MS and
     TW2023ICD10PCS 0..1 MS
 * code.coding[LOINCObservationCode] from LOINCObservationCode (required)
-* code.coding[LOINCObservationCode].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw"
+* code.coding[LOINCObservationCode].system = "http://loinc.org"
 * code.coding[LOINCObservationCode].system MS
 * code.coding[LOINCObservationCode].code 1..1 MS
 * code.coding[TWLaboratoryCategory] from TWLaboratoryCategory (required)
@@ -55,15 +49,15 @@ Description: "
 * code.coding[TW2023ICD10PCS] ^short = "此為臺灣健保署2023年中文版ICD-10-PCS，可免費使用，可依情境選用此代碼。"
 * code.coding[TW2023ICD10PCS] ^binding.description = "應填入所綁定值集中的其中一個代碼。"
 
-* basedOn only Reference(CarePlan or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or ServiceRequest)
+* basedOn only Reference(TWCoreCarePlan or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or TWCoreServiceRequest)
 * subject 1..
 * subject only Reference(TWCorePatient or Group or Device or TWCoreLocation)
 * encounter only Reference(TWCoreEncounter)
 * effective[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * effective[x] ^type.extension.valueBoolean = true
-* performer only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or CareTeam)
+* performer only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCoreCareTeam)
 * performer MS
-* resultsInterpreter only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or CareTeam)
+* resultsInterpreter only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCoreCareTeam)
 * result only Reference(TWCoreObservationLaboratoryResult)
 * result MS
 * conclusion MS

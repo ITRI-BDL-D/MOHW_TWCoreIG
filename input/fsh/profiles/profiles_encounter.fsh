@@ -2,8 +2,8 @@ Profile:        TWCoreEncounter
 Parent:         Encounter
 Id:             Encounter-twcore
 Title:          "TW Core Encounter"
-Description:    "此臺灣核心-就醫事件（TW Core Encounter) Profile說明本IG如何進一步定義FHIR的Encounter Resource以呈現就醫事件。"
-* ^version = "0.2.3"
+Description:    "此臺灣核心-就醫事件（TW Core Encounter） Profile說明本IG如何進一步定義FHIR的Encounter Resource以呈現就醫事件。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * identifier and identifier.system and identifier.value and period and reasonCode MS
@@ -24,15 +24,15 @@ Description:    "此臺灣核心-就醫事件（TW Core Encounter) Profile說明
     TWMedicalConsultationDepartment 0..1 MS and
     TWMedicalTreatmentDepartment 0..1 MS
 * serviceType.coding[TWMedicalConsultationDepartment] from TWMedicalConsultationDepartment (required)
-* serviceType.coding[TWMedicalConsultationDepartment].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-tw"
+* serviceType.coding[TWMedicalConsultationDepartment].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-consultation-department-nhi-tw"
 * serviceType.coding[TWMedicalTreatmentDepartment] from TWMedicalTreatmentDepartment (required)
-* serviceType.coding[TWMedicalTreatmentDepartment].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-treatment-department-tw"
+* serviceType.coding[TWMedicalTreatmentDepartment].system = "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/medical-treatment-department-nhi-tw"
 * serviceType.coding[TWMedicalDepartmentSCT] from TWMedicalDepartmentSCT (required)
 * serviceType.coding[TWMedicalDepartmentSCT].system = "http://snomed.info/sct"
 
 * subject only Reference(TWCorePatient or Group)
 * participant and participant.type and participant.period and participant.individual MS
-* participant.individual only Reference(TWCorePractitioner or TWCorePractitionerRole or RelatedPerson)
+* participant.individual only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreRelatedPerson)
 * reasonReference only Reference(TWCoreCondition or TWCoreProcedure or TWCoreObservationLaboratoryResult or ImmunizationRecommendation)
 * diagnosis.condition only Reference(TWCoreCondition or TWCoreProcedure)
 * hospitalization.dischargeDisposition MS
@@ -43,6 +43,7 @@ Description:    "此臺灣核心-就醫事件（TW Core Encounter) Profile說明
 * serviceProvider MS
 * serviceProvider only Reference(TWCoreOrganization)
 * partOf only Reference(TWCoreEncounter)
+* basedOn only Reference(TWCoreServiceRequest)
 
 * identifier.type only CodeableConceptTW
 * class only CodingTW

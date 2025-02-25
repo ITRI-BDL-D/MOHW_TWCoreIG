@@ -2,19 +2,27 @@ Instance: obs-averageBloodPressure-example
 InstanceOf: TWCoreObservationAverageBloodPressure
 Usage: #example
 * status = #final
-* category[VSCat] = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
-* code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#96607-7 "Blood pressure panel mean systolic and mean diastolic"
+* category = http://terminology.hl7.org/CodeSystem/observation-category#vital-signs "Vital Signs"
+* code = http://loinc.org#96607-7 "Blood pressure panel mean systolic and mean diastolic"
 * code.text = "平均血壓"
 * subject.reference = "Patient/pat-example"
 * effectiveDateTime = "2024-01-01"
-* performer = Reference(Practitioner/pra-nurse-example)
-* component[Systolic].code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#96608-5 "Systolic blood pressure mean"
-* component[Systolic].code.text = "平均收縮壓"
-* component[Systolic].valueQuantity = 120 'mm[Hg]' "mm[Hg]"
-* component[Diastolic].code = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw#96609-3 "Diastolic Average Blood Pressure Code"
-* component[Diastolic].code.text = "平均舒張壓"
-* component[Diastolic].valueQuantity = 80 'mm[Hg]' "mm[Hg]"
-* component[Number].code = http://snomed.info/sct#246432004 "Number of occurrences (qualifier value)"
-* component[Number].code.text = "測量次數"
+* performer.reference = "Practitioner/pra-nurse-example"
+* component[Systolic].code.coding.system = "http://loinc.org"
+* component[Systolic].code.coding.code = #96608-5
+* component[Systolic].valueQuantity.value = 120
+* component[Systolic].valueQuantity.unit = "mm[Hg]"
+* component[Systolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Systolic].valueQuantity.code = #mm[Hg]
+
+* component[Diastolic].code.coding.system = "http://loinc.org"
+* component[Diastolic].code.coding.code = #96609-3
+* component[Diastolic].valueQuantity.value = 80
+* component[Diastolic].valueQuantity.unit = "mm[Hg]"
+* component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Diastolic].valueQuantity.code = #mm[Hg]
+
+* component[Number].code.coding.system = "http://snomed.info/sct"
+* component[Number].code.coding.code = #246432004
 * component[Number].valueQuantity.value = 3
-* component[Number].valueQuantity.unit = "#"
+//* component[=].valueQuantity.unit = "#"

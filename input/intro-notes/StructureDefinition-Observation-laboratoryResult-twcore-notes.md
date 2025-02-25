@@ -25,7 +25,7 @@
     `GET [base]/Observation?code={system|}[code]`
 
     例子：  
-      (1) GET [base]/Observation?code=https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw|10449-7
+      (1) GET [base]/Observation?code=http://loinc.org|10449-7
 
 
 4. **建議應該（SHOULD）** 支援透過查詢參數 **[`performer`](SearchParameter-Observation-performer.html)** 查詢所有Observation：        
@@ -52,7 +52,7 @@
       (1) GET [base]/Observation?subject=Patient/pat-example
 
 
-7. **建議應該（SHOULD）** 支援透過查詢參數 **[`subject`](SearchParameter-Observation-date.html)** 查詢所有Observation：  
+7. **建議應該（SHOULD）** 支援透過查詢參數 **[`date`](SearchParameter-Observation-date.html)** 查詢所有Observation：  
     ([如何透過date查詢](http://hl7.org/fhir/R4/search.html#date))  
     `GET [base]/Observation?date={gt|lt|ge|le}[date]`
 
@@ -154,7 +154,7 @@ DiagnosticReport 直接關聯到一個醫令（ServiceRequest）。<code>Diagnos
   "code": {
     "coding": [
       {
-        "system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+        "system": "http://loinc.org",
         "code": "XXX-XXXX",
         "display": "Complete blood count (CBC) panel"
       }
@@ -208,7 +208,7 @@ DiagnosticReport 直接關聯到一個醫令（ServiceRequest）。<code>Diagnos
   "code": {
     "coding": [
       {
-        "system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+        "system": "http://loinc.org",
         "code": "39156-5",
         "display": "Body Mass Index (BMI) [Ratio]"
       }
@@ -293,7 +293,7 @@ LOINC 代碼 43304-5 Chlamydia trachomatis rRNA [Presence] in Specimen by NAA wi
         "code": {
             "coding": [
                 {
-                    "system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+                    "system": "http://loinc.org",
                     "code": "74076-1",
                     "display": "Medication or substance involved"
                 }
@@ -303,7 +303,7 @@ LOINC 代碼 43304-5 Chlamydia trachomatis rRNA [Presence] in Specimen by NAA wi
         "valueCodeableConcept": {
             "coding": [
                 {
-                    "system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+                    "system": "http://loinc.org",
                     "code": " LA20343-2",
                     "display": "Other substance: PLEASE SPECIFY"
                 }
@@ -377,7 +377,7 @@ FHIR 檢驗檢查包括兩個關鍵資料項目：
 "code": {
 	"coding": [
 		{
-			"system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+			"system": "http://loinc.org",
 			"code": "6689-4",
 			"display": "Glucose [Mass/​volume] in Blood --2 hours post meal"
 		}
@@ -396,12 +396,12 @@ FHIR 檢驗檢查包括兩個關鍵資料項目：
 "code": {
 	"coding": [
 		{
-			"system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+			"system": "http://loinc.org",
 			"code": "59408-5",
 			"display": "Oxygen saturation in Arterial blood by Pulse oximetry"
 		},
 		{
-			"system": "https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw",
+			"system": "http://loinc.org",
 			"code": "20564-1",
 			"display": "Oxygen saturation in Blood"
 		}
@@ -430,7 +430,7 @@ FHIR 檢驗檢查包括兩個關鍵資料項目：
 
 * 請看上述關於[使用代碼來表示檢驗檢查結果](https://hl7.org/fhir/R4/observation.html#usingcodes)的說明：
 
-    * 因為大部分檢驗檢查結果的資料並非完全是對或錯，例如會有「未知」這種特殊值，所以很少直接用布林值（是或否）來表示<code>value[x]</code>。反之，建議使用CodeableConcept資料型別，從[http://terminology.hl7.org/ValueSet/v2-0136](http://terminology.hl7.org/ValueSet/v2-0136)挑選代碼（這些代碼可以用來表示「是/否」，或者根據需要轉換成「真/假」等其他明確互斥的詞彙）。
+    * 因為大部分檢驗檢查結果的資料並非完全是對或錯，例如會有「未知」這種特殊值，所以很少直接用布林值（是或否）來表示<code>value[x]</code>。反之，建議使用CodeableConcept資料類型，從[http://terminology.hl7.org/ValueSet/v2-0136](http://terminology.hl7.org/ValueSet/v2-0136)挑選代碼（這些代碼可以用來表示「是/否」，或者根據需要轉換成「真/假」等其他明確互斥的詞彙）。
 
     * 對於特殊的值，如「E」表示錯誤、「L」表示低於限制和「U」表示高於限制，在SampledData資料類型中有所使用。但是，如果在檢驗檢查中要表示某個資料高於或低於限制，應該使用<code>valueQuantity</code>，並明確標出限制值及其比較條件。此外，當有錯誤發生時，應該使用<code>dataAbsentReason</code>資料項目指明具體是「錯誤」或「非數值」。比如，如果某個資料低於限制，比如小於2.0 mmol/L，那麼<code>valueQuantity</code>應該如何表示呢？
 

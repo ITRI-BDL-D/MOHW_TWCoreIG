@@ -2,13 +2,13 @@ Profile: TWCoreMedicationRequest
 Parent: MedicationRequest
 Id: MedicationRequest-twcore
 Title: "TW Core MedicationRequest"
-Description: "此臺灣核心-藥品請求（TW Core MedicationRequest) Profile說明本IG如何進一步定義FHIR的MedicationRequest Resource以呈現藥品請求的詳細資料。"
+Description: "此臺灣核心-藥品請求（TW Core MedicationRequest） Profile說明本IG如何進一步定義FHIR的MedicationRequest Resource以呈現藥品請求的詳細資料。"
 
-* ^version = "0.2.3"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * status and intent and category and subject and encounter and requester and dosageInstruction and dosageInstruction.text and dosageInstruction.route and medication[x] and dosageInstruction.timing and reasonReference and identifier and authoredOn and note and dispenseRequest and dispenseRequest.validityPeriod and dispenseRequest.numberOfRepeatsAllowed and dispenseRequest.expectedSupplyDuration MS
-* reported[x] only boolean or Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or RelatedPerson or TWCoreOrganization)
+* reported[x] only boolean or Reference(TWCorePatient or TWCorePractitioner or TWCorePractitionerRole or TWCoreRelatedPerson or TWCoreOrganization)
 * medication[x] only CodeableConceptTW or Reference(TWCoreMedication)
 * medicationReference only Reference(TWCoreMedication)
 * medicationCodeableConcept.coding ^slicing.discriminator.type = #pattern
@@ -31,11 +31,12 @@ Description: "此臺灣核心-藥品請求（TW Core MedicationRequest) Profile�
 
 * subject only Reference(TWCorePatient or Group)
 * encounter only Reference(TWCoreEncounter)
-* requester only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or RelatedPerson or Device)
-* performer only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or RelatedPerson or CareTeam)
+* requester only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or TWCoreRelatedPerson or Device)
+* performer only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or TWCoreRelatedPerson or TWCoreCareTeam)
 * recorder only Reference(TWCorePractitioner or TWCorePractitionerRole)
 * reasonReference only Reference(TWCoreCondition or TWCoreObservationLaboratoryResult)
-* basedOn only Reference(CarePlan or TWCoreMedicationRequest or ServiceRequest or ImmunizationRecommendation)	
+* basedOn only Reference(TWCoreCarePlan  or TWCoreMedicationRequest or TWCoreServiceRequest or ImmunizationRecommendation)	
+* eventHistory only Reference(TWCoreProvenance)
 /* dosageInstruction.route.coding ^slicing.discriminator.type = #pattern
 * dosageInstruction.route.coding ^slicing.discriminator.path = "$this"
 * dosageInstruction.route.coding ^slicing.rules = #open
@@ -126,7 +127,7 @@ Description: "此臺灣核心-藥品請求（TW Core MedicationRequest) Profile�
 * intent ^short = "proposal | plan | order | original-order | reflex-order | filler-order | instance-order | option"
 * intent ^binding.description = "應填入所綁定值集中的其中一個代碼"
 * intent ^definition = "請求是提案、計畫、還是原始醫令？"
-* intent ^comment = "預期服務請求者的型別將在MedicationRequest的不同階段受到限制。例如：提案可由病人（Patient）、相關人員（relatedPerson）、健康照護服務提供者（Practitioner）或設備（Device）建立。照護計畫可由健康照護服務提供者、病人、相關人員和設備建立。原始醫令只能由健康照護服務提供者建立。
+* intent ^comment = "預期服務請求者的型別將在MedicationRequest的不同階段受到限制。例如：提案可由病人（Patient）、相關人士（relatedPerson）、健康照護服務提供者（Practitioner）或設備（Device）建立。照護計畫可由健康照護服務提供者、病人、相關人士和設備建立。原始醫令只能由健康照護服務提供者建立。
  
 實例醫令（an instance-order）是請求或醫令的實例，可用於填充給藥紀錄。
  
@@ -412,7 +413,7 @@ Binding：一個編碼概念，指明在服用或用藥之前應滿足或評估�
 * dosageInstruction.route.coding ^requirements = "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。"
 * dosageInstruction.route.coding ^comment = "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。"
 //* dosageInstruction.route.coding[nhi-drug-path] ^short = "由專門術語系統（terminology system）定義的代碼"
-//* dosageInstruction.route.coding[nhi-drug-path] ^binding.description = "應填入[臺灣衛福部統計處給藥途徑值集](https://twcore.mohw.gov.tw/ig/twcore/ValueSet-medication-path-tw.html)中的其中一個代碼"
+//* dosageInstruction.route.coding[nhi-drug-path] ^binding.description = "應填入[臺灣健保署給藥途徑值集](https://twcore.mohw.gov.tw/ig/twcore/ValueSet-medication-path-tw.html)中的其中一個代碼"
 //* dosageInstruction.route.coding[nhi-drug-path] ^definition = "由專門術語系統（terminology system）所定義之代碼的參照"
 //* dosageInstruction.route.coding[nhi-drug-path] ^requirements = "允許代碼系統中的替代編碼，以及翻譯到其他編碼系統。"
 //* dosageInstruction.route.coding[nhi-drug-path] ^comment = "代碼可以在列舉清單（enumerations）或代碼清單（code lists）中非常隨意地定義，直至有非常正式的定義，例如：SNOMED CT—更多資訊見HL7 v3核心原則（Core Principles）。編碼的排序是未定義的因而 **必須沒有（SHALL NOT）** 被用來推斷意義。一般來說，最多只有一個編碼值（coding values）會被標記為UserSelected = true。"

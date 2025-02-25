@@ -2,7 +2,7 @@ Logical: TWCompositionModel
 Id: TWComposition
 Title: "臺灣核心-臨床文件架構(TW Core Composition) 之資料模型"
 Description: "臺灣核心-臨床文件架構(TW Core Composition) 之資料模型"
-* ^version = "0.2.3"
+* ^version = "0.3.2"
 * identifier 0..1 Identifier "不分版本的臨床文件架構(Composition)識別碼。" "不分版本的臨床文件架構(臨床文件架構)識別碼。"
 * status 1..1 code "臨床文件架構的工作流程/臨床狀態。" "臨床文件架構的工作流程/臨床狀態。"
 * type 1..1 CodeableConcept "臨床文件架構的種類(如果可能請使用LOINC)。" "臨床文件架構的種類(如果可能請使用LOINC)。"
@@ -21,7 +21,7 @@ Description: "臺灣核心-臨床文件架構(TW Core Composition) 之資料模�
 * author.organization 0..*  Organization "某機構創建這個臨床文件架構。" "某機構創建這個臨床文件架構。"
 * author.patient 0..*  Patient "某病人創建這個臨床文件架構。" "某病人創建這個臨床文件架構。"
 * author.device 0..*  Device "某設備創建這個臨床文件架構。" "某設備創建這個臨床文件架構。"
-* author.relatedPerson 0..*  RelatedPerson "某相關人員創建這個臨床文件架構。" "某相關人員創建這個臨床文件架構。"
+* author.relatedPerson 0..*  RelatedPerson "某相關人士創建這個臨床文件架構。" "某相關人士創建這個臨床文件架構。"
 * title 1..1 string "人類可讀的名稱/標題。" "人類可讀的名稱/標題。"
 * attester 0..* BackboneElement "證明臨床文件架構的準確性。" "證明臨床文件架構的準確性。"
 * custodian 0..1 Organization "維護臨床文件架構的機構。" "維護臨床文件架構的機構。" 

@@ -8,7 +8,7 @@ Usage: #example
 * type = http://terminology.hl7.org/CodeSystem/encounter-type#ADMS
 //* serviceType = http://terminology.hl7.org/CodeSystem/service-type#318 "Diabetes"
 //* serviceType.text = "糖尿病"
-* serviceType = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/sct-tw#394589003 "Nephrology (qualifier value)"
+* serviceType = http://snomed.info/sct#394589003 "Nephrology (qualifier value)"
 * serviceType.text = "腎臟內科"
 * subject = Reference(Patient/pat-example)
 * participant.type = http://terminology.hl7.org/CodeSystem/v3-ParticipationType#PPRF
@@ -67,14 +67,14 @@ Usage: #example
 			<td>*</td>
 			<td>primary performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ( <a href=\"https://terminology.hl7.org/4.0.0/CodeSystem-v3-ParticipationType.html\">ParticipationType</a>#PPRF) </span>
 			</td>
-			<td>2022-08-01 05:00:14-0500 --&gt; 2022-08-01 06:00:14-0500</td>
+			<td>2022-08-01 17:00:14+08:00 --&gt; 2022-08-01 18:00:14+08:00</td>
 			<td>
 				<a href=\"Practitioner-pra-dr-example.html\">Practitioner/pra-dr-example</a> \"王依昇\"
 			</td>
 		</tr>
 	</table>
 	<p>
-		<b>就醫的開始和結束時間</b>：2022-08-01 05:00:14-0500 --&gt; 2022-08-01 06:00:14-0500
+		<b>就醫的開始和結束時間</b>：2022-08-01 17:00:14+08:00 --&gt; 2022-08-01T18:00:14 08:00
 	</p>
 	<p>
 		<b>就醫原因</b>：FH: Diabetes mellitus <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ( <a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#160303001) </span>

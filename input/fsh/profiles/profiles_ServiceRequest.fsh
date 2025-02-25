@@ -1,53 +1,23 @@
-Alias: $CarePlan-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CarePlan-twcore
-Alias: $MedicationRequest-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/MedicationRequest-twcore
-Alias: $CodeableConcept-tw = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw
-Alias: $Patient-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $Location-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Location-twcore
-Alias: $Device-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Device-twcore
-Alias: $Encounter-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Encounter-twcore
-Alias: $Practitioner-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore
-Alias: $Organization-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore
-Alias: $PractitionerRole-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore
-Alias: $RelatedPerson-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/RelatedPerson-twcore
-Alias: $Condition-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Condition-twcore
-Alias: $Observation-clinical-result-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-clinical-result-twcore
-Alias: $DiagnosticReport-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DiagnosticReport-twcore
-Alias: $DocumentReference-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/DocumentReference-twcore
-Alias: $Coverage-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Coverage-twcore
-Alias: $Specimen-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Specimen-twcore
-Alias: $serviceRequest-category = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/serviceRequest-category
-Alias: $icd-10-pcs-2023-tw = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-pcs-2023-tw
-Alias: $icd-10-pcs-2014-tw = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/icd-10-pcs-2014-tw
-Alias: $procedure-tw = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/procedure-tw
-Alias: $procedure-code = http://hl7.org/fhir/ValueSet/procedure-code
-Alias: $condition-code-sct-tw = https://twcore.mohw.gov.tw/ig/twcore/ValueSet/condition-code-sct-tw
-
-Profile: TWCoreServiceRequest
-Parent: ServiceRequest
-Id: ServiceRequest-twcore
-Title: "TW Core ServiceRequest"
-Description: "此臺灣核心-服務請求（TW Core ServiceRequest） Profile說明本IG如何進一步定義FHIR的ServiceRequest Resource以呈現服務請求資料。"
-* ^version = "0.3.0"
-* ^status = #active
-* ^contact.name = "衛生福利部"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "https://www.mohw.gov.tw/"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "CCYU@mohw.gov.tw"
-* basedOn only Reference($CarePlan-twcore or TWCoreServiceRequest or $MedicationRequest-twcore)
-* replaces only Reference(TWCoreServiceRequest)
+Profile:        TWCoreServiceRequest
+Parent:         ServiceRequest
+Id:             ServiceRequest-twcore
+Title:          "TW Core ServiceRequest"
+Description:    "此臺灣核心-服務請求（TW Core ServiceRequest） Profile說明本IG如何進一步定義FHIR的ServiceRequest Resource以呈現服務請求資料。"
+* ^version = "0.3.2"
 * status MS
 * intent MS
-* category only $CodeableConcept-tw
 * category MS
+* category only CodeableConceptTW
 * category ^slicing.discriminator.type = #pattern
 * category ^slicing.discriminator.path = "$this"
 * category ^slicing.rules = #open
 * category contains twcore 0..* MS
-* category[twcore] from $serviceRequest-category (required)
+* category[twcore] from TWServiceRequestCategory
 * category[twcore] ^binding.description = "此slice綁定的值集之綁定強度雖為最高強度「要求使用(Requird)」，但因slice之特性，其不會限制僅能填此值集中的代碼，故在實作時也可使用其他值集的代碼。"
-* code 1.. MS
-* code only $CodeableConcept-tw
+* code 1..1 MS
+* code only CodeableConceptTW
+* code ^binding.description = "此資料項目實作者可視實務專案需求只綁定以下slices中的任一值集。"
+//* code from $sct-procedures (required)
 * code.coding ^slicing.discriminator.type = #pattern
 * code.coding ^slicing.discriminator.path = "$this"
 * code.coding ^slicing.rules = #open
@@ -56,30 +26,34 @@ Description: "此臺灣核心-服務請求（TW Core ServiceRequest） Profile�
     icd10-pcs-2021 0..1 MS and
     icd10-pcs-2014 0..1 MS and
     medical-service-payment 0..1 MS and
-    sct-procedures 0..1 MS and
-    loinc-procedures 0..1 MS
-* code.coding[icd10-pcs-2023] from $icd-10-pcs-2023-tw (required)
-* code.coding[icd10-pcs-2021] from $icd-10-pcs-2021-tw (required)
-* code.coding[icd10-pcs-2014] from $icd-10-pcs-2014-tw (required)
-* code.coding[medical-service-payment] from $procedure-tw (required)
-* code.coding[sct-procedures] from $procedure-code (required)
+    sct-procedures 0..1 MS and 
+    loinc-procedures 0..1 MS 
+* code.coding[icd10-pcs-2021] from TW2021ICD10PCS (required)
+* code.coding[icd10-pcs-2023] from TW2023ICD10PCS (required)
+* code.coding[icd10-pcs-2014] from TW2014ICD10PCS (required)
+* code.coding[medical-service-payment] from TWMedicalServicePayment (required)
+* code.coding[sct-procedures] from $sct-procedures (required)
 * code.coding[loinc-procedures] from LOINCCodes (required)
-* subject only Reference($Patient-twcore or Group or $Location-twcore or $Device-twcore)
 * subject MS
-* subject ^type.targetProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* subject ^type.targetProfile.extension.valueBoolean = true
-* encounter only Reference($Encounter-twcore)
-* occurrence[x] only dateTime or Period or Timing
+* subject only Reference(TWCorePatient or Group or TWCoreLocation or TWCoreImplantableDevice)
+* subject ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* subject ^type[=].targetProfile[=].extension.valueBoolean = true
+* encounter only Reference(TWCoreEncounter)
 * occurrence[x] MS
+* occurrence[x] only Period or dateTime or Timing
 * occurrence[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * occurrence[x] ^type.extension.valueBoolean = true
 * authoredOn MS
-* requester only Reference($Practitioner-twcore or $Organization-twcore or $Patient-twcore or $PractitionerRole-twcore or $RelatedPerson-twcore or $Device-twcore)
 * requester MS
-* requester ^type.targetProfile.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* requester ^type.targetProfile.extension.valueBoolean = true
-* locationReference only Reference($Location-twcore)
-* reasonCode from $condition-code-sct-tw (extensible)
-* reasonReference only Reference($Condition-twcore or $Observation-clinical-result-twcore or $DiagnosticReport-twcore or $DocumentReference-twcore)
-* insurance only Reference($Coverage-twcore or ClaimResponse)
-* specimen only Reference($Specimen-twcore)
+* requester only Reference(TWCorePractitioner or TWCoreOrganization or TWCorePatient or TWCorePractitionerRole or TWCoreRelatedPerson or TWCoreImplantableDevice)
+* requester ^type[0].targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* requester ^type[=].targetProfile[=].extension.valueBoolean = true
+* reasonCode from TWConditionCodeSCT (extensible)
+* reasonReference only Reference(TWCoreCondition or TWCoreObservationClinicalResult or TWCoreDiagnosticReport or TWCoreDocumentReference)
+* basedOn only Reference(TWCoreCarePlan or TWCoreServiceRequest or TWCoreMedicationRequest)
+* locationReference only Reference(TWCoreLocation)
+* reasonReference only Reference(TWCoreCondition or TWCoreObservationClinicalResult or TWCoreDiagnosticReport or TWCoreDocumentReference)
+* replaces only Reference(TWCoreServiceRequest)
+* insurance only Reference(TWCoreCoverage or ClaimResponse)
+* specimen only Reference(TWCoreSpecimen)
+* performer only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCoreCareTeam or HealthcareService or TWCorePatient or  Device or TWCoreRelatedPerson)

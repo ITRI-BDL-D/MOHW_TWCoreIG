@@ -2,17 +2,17 @@ Profile: TWCoreComposition
 Parent: Composition
 Id: Composition-twcore
 Title: "TW Core Composition"
-Description: "此臺灣核心-臨床文件架構（TW Core Composition) Profile說明本IG如何進一步定義FHIR的Composition Resource以呈現臨床文件架構的詳細資料。"
-* ^version = "0.2.3"
+Description: "此臺灣核心-臨床文件架構（TW Core Composition） Profile說明本IG如何進一步定義FHIR的Composition Resource以呈現臨床文件架構的詳細資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 * identifier and status and subject and attester and type and date and author and custodian and title and section and section.code and section.text and section.entry MS
 * subject only Reference(TWCorePatient or Group or Device or Substance or TWCoreLocation)
 * encounter only Reference(TWCoreEncounter)
-* author only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or RelatedPerson)
-* attester.party only Reference(TWCorePatient or RelatedPerson or TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization)
+* author only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or TWCoreRelatedPerson)
+* attester.party only Reference(TWCorePatient or TWCoreRelatedPerson or TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization)
 * custodian only Reference(TWCoreOrganization)
-* section.author only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or RelatedPerson)
+* section.author only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization or TWCorePatient or Device or TWCoreRelatedPerson)
 * type only CodeableConceptTW 
 * category only CodeableConceptTW 
 * event.code only CodeableConceptTW 

@@ -1,26 +1,12 @@
-Alias: $loinc-tw = https://twcore.mohw.gov.tw/ig/twcore/CodeSystem/loinc-tw
-Alias: $sct = http://snomed.info/sct
-Alias: $CodeableConcept-tw = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/CodeableConcept-tw
-Alias: $Patient-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Patient-twcore
-Alias: $Practitioner-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Practitioner-twcore
-Alias: $Organization-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Organization-twcore
-Alias: $PractitionerRole-twcore = https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/PractitionerRole-twcore
-
-Profile: TWCoreObservationAverageBloodPressure
-Parent: Observation
-Id: Observation-averageBloodPressure-twcore
-Title: "TW Core Observation Average Blood Pressure"
-Description: "此臺灣核心-平均血壓(TW Core Observation Average Blood Pressure) Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現平均血壓資料。"
-* ^url = "https://twcore.mohw.gov.tw/ig/twcore/StructureDefinition/Observation-averageBloodPressure-twcore"
-* ^version = "0.2.3"
-* ^contact.name = "衛生福利部"
-* ^contact.telecom[0].system = #url
-* ^contact.telecom[=].value = "https://www.mohw.gov.tw/"
-* ^contact.telecom[+].system = #email
-* ^contact.telecom[=].value = "CCYU@mohw.gov.tw"
+Profile:        TWCoreObservationAverageBloodPressure
+Parent:         Observation
+Id:             Observation-averageBloodPressure-twcore
+Title:          "TW Core Observation Average Blood Pressure"
+Description:    "此臺灣核心-平均血壓（TW Core Observation Average Blood Pressure） Profile說明本IG如何進一步定義FHIR的Observation Resource以呈現平均血壓資料。"
+* ^version = "0.3.2"
 * status MS
-* category only $CodeableConcept-tw
-* category MS
+* category 1.. MS
+* category only CodeableConceptTW
 * category ^slicing.discriminator[0].type = #value
 * category ^slicing.discriminator[=].path = "coding.code"
 * category ^slicing.discriminator[+].type = #value
@@ -28,74 +14,96 @@ Description: "此臺灣核心-平均血壓(TW Core Observation Average Blood Pre
 * category ^slicing.ordered = false
 * category ^slicing.rules = #open
 * category contains VSCat 0..1 MS
-* category[VSCat].coding 1..
-* category[VSCat].coding.system 1..
+* category[VSCat] 0..1 MS
+* category[VSCat] only CodeableConceptTW
+* category[VSCat].coding 1..* MS
+* category[VSCat].coding.system 1..1 MS
 * category[VSCat].coding.system = "http://terminology.hl7.org/CodeSystem/observation-category"
-* category[VSCat].coding.code 1..
+* category[VSCat].coding.code 1..1 MS
 * category[VSCat].coding.code = #vital-signs
-* code only $CodeableConcept-tw
-* code = $loinc-tw#96607-7
-* code MS
+* code = http://loinc.org#96607-7
 * code ^short = "血壓"
-* subject only Reference($Patient-twcore)
+* effective[x] 1..1
+//* effective[x] only dateTime
+* effective[x] MS
+* effective[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* effective[x] ^type[=].code = #Period
+* effective[x] ^type[=].extension.valueBoolean = true
+* effective[x] ^type[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* effective[x] ^type[=].code = #dateTime
+* effective[x] ^type[=].extension.valueBoolean = false
+
+* category only CodeableConceptTW
+* code only CodeableConceptTW
+* component.code only CodeableConceptTW
+* code MS
+* code.text MS
 * subject MS
-* effective[x] 1.. MS
-* effective[x] only dateTime or Period
-* effective[x] ^type.extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
-* effective[x] ^type.extension.valueBoolean = true
-* performer only Reference($Practitioner-twcore or $Organization-twcore or $Patient-twcore or $PractitionerRole-twcore or CareTeam)
-* performer MS
+* subject only Reference(TWCorePatient)
+
+
 * value[x] ..0
 * component MS
 * component obeys tw-core-2
-* component ^slicing.discriminator[0].type = #pattern
-* component ^slicing.discriminator[=].path = "code"
-* component ^slicing.ordered = false
-* component ^slicing.rules = #open
 * component ^short = "Average systolic and diastolic blood pressure and other qualifiers."
-* component.code only $CodeableConcept-tw
+* component.value[x] only Quantity or CodeableConcept or string or boolean or integer or Range or Ratio or SampledData or time or dateTime or Period
 * component.value[x] MS
 * component.value[x] ^short = "Vital Sign Component Value"
 * component.value[x] ^definition = "Vital Signs value are typically recorded using the Quantity data type. For supporting observations such as cuff size could use other datatypes such as CodeableConcept."
+/* component.value[x] ^type[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
+* component.value[x] ^type[=].extension.valueBoolean = true*/
 * component.dataAbsentReason MS
 * component.dataAbsentReason ^condition = "tw-core-2"
+* component ^slicing.discriminator.type = #pattern
+* component ^slicing.discriminator.path = "code"
+* component ^slicing.ordered = false
+* component ^slicing.rules = #open
 * component contains
     Systolic 1..1 MS and
     Diastolic 1..1 MS and
     Number 0..1 MS
 * component[Systolic] ^short = "平均收縮壓"
-* component[Systolic].code = $loinc-tw#96608-5
-* component[Systolic].code MS
+* component[Systolic].code 1..1 MS
+* component[Systolic].code = http://loinc.org#96608-5
 * component[Systolic].code ^short = "Systolic Average Blood Pressure Code"
 * component[Systolic].value[x] only Quantity
-* component[Systolic].value[x] ^short = "Systolic Average Blood Pressure Value"
-* component[Systolic].value[x] ^condition = "tw-core-2"
-* component[Systolic].value[x].value 1.. MS
-* component[Systolic].value[x].unit 1.. MS
-* component[Systolic].value[x].system 1.. MS
-* component[Systolic].value[x].system = "http://unitsofmeasure.org"
-* component[Systolic].value[x].code 1.. MS
-* component[Systolic].value[x].code = #mm[Hg]
+* component[Systolic].valueQuantity only Quantity
+* component[Systolic].valueQuantity MS
+* component[Systolic].valueQuantity ^short = "Systolic Average Blood Pressure Value"
+* component[Systolic].valueQuantity ^condition = "tw-core-2"
+* component[Systolic].valueQuantity.value 1..1 MS
+* component[Systolic].valueQuantity.unit 1..1 MS
+* component[Systolic].valueQuantity.system 1..1 MS
+* component[Systolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Systolic].valueQuantity.code 1..1 MS
+* component[Systolic].valueQuantity.code = #mm[Hg]
 * component[Diastolic] ^short = "平均舒張壓"
-* component[Diastolic].code = $loinc-tw#96609-3
-* component[Diastolic].code MS
+* component[Diastolic].code 1..1 MS
+* component[Diastolic].code = http://loinc.org#96609-3
 * component[Diastolic].code ^short = "Diastolic Average Blood Pressure Code"
 * component[Diastolic].value[x] only Quantity
-* component[Diastolic].value[x] ^short = "Diastolic Average Blood Pressure Value"
-* component[Diastolic].value[x] ^condition = "tw-core-2"
-* component[Diastolic].value[x].value 1.. MS
-* component[Diastolic].value[x].unit 1.. MS
-* component[Diastolic].value[x].system 1.. MS
-* component[Diastolic].value[x].system = "http://unitsofmeasure.org"
-* component[Diastolic].value[x].code 1.. MS
-* component[Diastolic].value[x].code = #mm[Hg]
+* component[Diastolic].valueQuantity only Quantity
+* component[Diastolic].valueQuantity MS
+* component[Diastolic].valueQuantity ^short = "Diastolic Average Blood Pressure Value"
+* component[Diastolic].valueQuantity ^condition = "tw-core-2"
+* component[Diastolic].valueQuantity.value 1..1 MS
+* component[Diastolic].valueQuantity.unit 1..1 MS
+* component[Diastolic].valueQuantity.system 1..1 MS
+* component[Diastolic].valueQuantity.system = "http://unitsofmeasure.org"
+* component[Diastolic].valueQuantity.code 1..1 MS
+* component[Diastolic].valueQuantity.code = #mm[Hg]
 * component[Number] ^short = "測量次數"
-* component[Number].code = $sct#246432004
-* component[Number].code MS
+* component[Number].code 1..1 MS
+* component[Number].code = http://snomed.info/sct#246432004
 * component[Number].value[x] only Quantity
-* component[Number].value[x].value 1.. MS
+* component[Number].valueQuantity only Quantity
+* component[Number].valueQuantity MS
+* component[Number].valueQuantity.value 1..1 MS
 
-Invariant: tw-core-2
-Description: "If there is no value a data absent reason must be present"
-* severity = #error
-* expression = "value.exists() or dataAbsentReason.exists()"
+* basedOn only Reference(TWCoreCarePlan or DeviceRequest or ImmunizationRecommendation or TWCoreMedicationRequest or NutritionOrder or TWCoreServiceRequest)
+* partOf only Reference(MedicationAdministration or TWCoreMedicationDispense or TWCoreMedicationStatement or TWCoreProcedure or TWCoreImmunization or TWCoreImagingStudy)
+* encounter only Reference(TWCoreEncounter)
+* performer only Reference(TWCorePractitioner or TWCoreOrganization or TWCorePatient or TWCorePractitionerRole or TWCoreCareTeam)
+* specimen only Reference(TWCoreSpecimen)
+* derivedFrom only Reference(TWCoreDocumentReference or TWCoreImagingStudy or TWCoreMedia or TWCoreQuestionnaireResponse or TWCoreObservationVitalSigns or MolecularSequence)
+* hasMember only Reference(TWCoreObservationVitalSigns or TWCoreQuestionnaireResponse or MolecularSequence)

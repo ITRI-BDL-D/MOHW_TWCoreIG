@@ -2,7 +2,7 @@ Logical: TWConditionModel
 Id: TWCondition
 Title: "臺灣核心-病情、問題或診斷(TW Core Condition) 之資料模型"
 Description: "臺灣核心-病情、問題或診斷(TW Core Condition) 之資料模型"
-* ^version = "0.2.3"
+* ^version = "0.3.2"
 //* text 0..1 Narrative "內容摘要以供人閱讀" "內容摘要以供人閱讀"
 * clinicalStatus 1..1 CodeableConcept "病情、問題或診斷的臨床狀態。" "病情、問題或診斷的臨床狀態。"
 * verificationStatus 0..1 CodeableConcept "病情、問題或診斷的臨床狀態的驗證狀態。" "病情、問題或診斷的臨床狀態的驗證狀態。"
@@ -18,7 +18,7 @@ Description: "臺灣核心-病情、問題或診斷(TW Core Condition) 之資料
 * asserter.practitioner 0..1 Practitioner "聲稱有此病情、問題或診斷的某健康照護服務提供者。" "聲稱有此病情、問題或診斷的某健康照護服務提供者。"
 * asserter.practitionerRole 0..1 PractitionerRole "聲稱有此病情、問題或診斷的某健康照護服務角色。" "聲稱有此病情、問題或診斷的某健康照護服務角色。"
 * asserter.patient 0..1 Patient "聲稱有此病情、問題或診斷的某病人。" "聲稱有此病情、問題或診斷的某病人。"
-* asserter.relatedPerson 0..1 RelatedPerson "聲稱有此病情、問題或診斷的某相關人員。" "聲稱有此病情、問題或診斷的某相關人員。"
+* asserter.relatedPerson 0..1 RelatedPerson "聲稱有此病情、問題或診斷的某相關人士。" "聲稱有此病情、問題或診斷的某相關人士。"
 
 Mapping: TWCondition
 Id: TWCondition

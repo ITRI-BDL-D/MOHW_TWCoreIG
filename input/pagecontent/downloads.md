@@ -7,9 +7,6 @@
 	</p><p>
     <a href="package.tgz">點我</a>下載Package
 	</p>
-	<p>
-		<a href="TW Core IG及TWCDI成果技術手冊.pdf">點我</a>下載TW Core IG及TWCDI成果技術手冊
-	</p>
 	<table>
 		<tbody>
 			<tr>

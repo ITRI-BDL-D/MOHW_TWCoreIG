@@ -2,8 +2,8 @@ Profile:        TWCorePractitionerRole
 Parent:         PractitionerRole
 Id:             PractitionerRole-twcore
 Title:          "TW Core PractitionerRole"
-Description:    "此臺灣核心-健康照護服務提供者角色（TW Core PractitionerRole) Profile說明本IG如何進一步定義FHIR的PractitionerRole Resource以呈現健康照護服務提供者角色的詳細資料。"
-* ^version = "0.2.3"
+Description:    "此臺灣核心-健康照護服務提供者角色（TW Core PractitionerRole） Profile說明本IG如何進一步定義FHIR的PractitionerRole Resource以呈現健康照護服務提供者角色的詳細資料。"
+* ^version = "0.3.2"
 * language ^example.label = "Value"
 * language ^example.valueString = "zh-TW"
 
