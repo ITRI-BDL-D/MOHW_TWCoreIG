@@ -8,7 +8,7 @@ Usage: #example
 * status = #final
 * category[VSCat] = $observation-category#vital-signs "Vital Signs"
 * category[VSCat].text = "生命體徵"
-* code.coding[O2Sat] = $loinc#2708-6 "Oxygen saturation in Arterial blood"
+* code.coding[OxygenSatCode] = $loinc#2708-6 "Oxygen saturation in Arterial blood"
 * code.coding[PulseOx] = $loinc#59408-5 "Oxygen saturation in Arterial blood by Pulse oximetry"
 * code.text = "脈搏血氧飽和度"
 * subject = Reference(Patient/pat-example) "陳加玲"

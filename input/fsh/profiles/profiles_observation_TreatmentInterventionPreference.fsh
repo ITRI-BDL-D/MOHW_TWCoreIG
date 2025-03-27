@@ -22,7 +22,7 @@ Description:    "此臺灣核心-病人治療偏好註記（TW Core Observation 
 * code MS
 * code only CodeableConceptTW
 * code = http://loinc.org#75773-2
-* code ^short = "Goals, preferences, and priorities for medical treatment [Reported]"
+* code ^short = "Goals, preferences, and priorities for medical treatment Narrative - Reported"
 * subject 1.. MS
 * subject only Reference(TWCorePatient)
 * effective[x] MS
