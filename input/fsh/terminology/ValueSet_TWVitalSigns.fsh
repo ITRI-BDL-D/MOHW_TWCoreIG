@@ -1,4 +1,3 @@
-Alias: $loinc = http://loinc.org
 Alias: $loinctw = http://loinc.org
 ValueSet: TWVitalSigns
 Id: vital-signs-tw
