@@ -1,21 +1,15 @@
 {
-  "package-id" : "tw.gov.mohw.twcore",
-  "version" : "0.2.3",
-  "path" : "https://twcore.mohw.gov.tw/ig/twcore/0.2.3",
-  "mode" : "milestone",
-  "status" : "trial-use",
-  "sequence" : "Releases",
-  "descmd" : "2024/5/29 (詳細說明請參照[應用說明](https://twcore.mohw.gov.tw/ig/twcore/0.2.3))：  
-   1. 修改Resource Profile：TW Core DiagnosticReport  
-   2. 修改Resource Profile：TW Core Organization      
-   3. 修改Resource Profile：TW Core Patient    
-   4. 修改Resource Profile：TW Core Practitioner  
-   5. 修改Resource Profile：TW Core Procedure  
-   6. 修改Extension: Identifier Suffix   
-   7. Data Type Profile: 臺灣核心-地址（TW Core Address）  
-   8. 修改代碼系統(CodeSystems)  
-   9. 修改值集(ValueSets)  
-   10. 修改概念對應(ConceptMaps)  
-  ",
-  "first" : false
+  "package-id": "tw.gov.mohw.twcore",
+  "version": "0.3.2",
+  "path": "https://twcore.mohw.gov.tw/ig/twcore/0.3.2",
+  "mode": "milestone",
+  "status": "trial-use",
+  "sequence": "Releases",
+  "descmd": "因考量實作需求，於2024/12/13異動以下內容：  
+    1. 因實務需求，工研院次世代數位醫療平台專案辦公室新增TWCDI內容說明。  
+    2. 更新代碼系統臺灣健保署2023年中文版ICD-10-CM，並新增property：\"USE\" 表「代碼有效/無效」以利專案使用。  
+    3. 更新代碼系統臺灣健保署2023年中文版ICD-10-PCS，並新增property：\"USE\" 表「代碼有效/無效」以利專案使用。  
+    4. 更新代碼系統臺灣健保署醫療服務給付項目，以利專案使用。  
+    請留意這些異動，以避免影響您的實作。  
+  ","first": false
 }
