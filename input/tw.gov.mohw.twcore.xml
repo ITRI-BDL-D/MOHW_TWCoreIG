@@ -690,7 +690,7 @@
 		
 	<resource>
 			<reference>
-				<reference value="Organization/org-govt-example"/>
+					<reference value="Organization/org-govt-example"/>
 			</reference>
 			<name value="政府機構基本資料"/>	
 			<description value="依據臺灣核心-政府機構(TW Core Organization Government) Profile呈現政府機構基本資料之範例"/>
@@ -933,7 +933,6 @@
 			<reference>
 				<reference value="StructureDefinition/Address-tw"/>
 			</reference>
-			<exampleBoolean value="false"/>
 		</resource>
 		
 		<resource>
