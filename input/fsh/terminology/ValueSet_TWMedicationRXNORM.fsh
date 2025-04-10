@@ -9,4 +9,5 @@ Description: "RxNorm藥品代碼值集
 * ^version = "3.0.0"
 * ^copyright = "RxNorm. RxNorm is copyright Unified Medical Language System® (UMLS®). Terms & Conditions in https://uts.nlm.nih.gov/license.html https://www.nlm.nih.gov/research/umls/rxnorm/docs/termsofservice.html."
 * ^experimental = false
-* include codes from system $rxnorm where TTY in "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+// * include codes from system $rxnorm where TTY in "SCD,SBD,GPCK,BPCK,SCDG,SBDG,SCDF,SBDF"
+* include codes from system $rxnorm where TTY in "SCD,SBD,GPCK,BPCK"
