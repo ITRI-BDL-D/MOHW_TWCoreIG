@@ -9,31 +9,31 @@ Description:    "此臺灣核心-給付範圍（TW Core Coverage） Profile說�
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier ^short = "Member ID and other identifiers"
+* identifier ^short = "會員ID及其他識別碼"
 * identifier contains memberid 0..1 MS
-* identifier[memberid] ^short = "Member ID"
+* identifier[memberid] ^short = "會員ID"
 * identifier[memberid] ^condition = "tw-core-3"
 * identifier[memberid].type 1.. MS
 * identifier[memberid].type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
-* identifier[memberid].type ^short = "Member Number identifier type"
+* identifier[memberid].type ^short = "會員號碼識別碼類型"
 * status MS
-* status ^comment = "The `Coverage.status` alone does not indicate whether an individual's coverage is terminated or that the individual is not covered. The `Coverage.period` needs to be considered as well."
+* status ^comment = "`Coverage.status`本身並不表示個人的保險是否已終止或個人未被保險。也需要考慮`Coverage.period`。"
 * type MS
 * type from http://hl7.org/fhir/ValueSet/coverage-type (extensible)
 * subscriberId MS
-* subscriberId ^comment = "The identifier assigned by the Payer on the subscriber's ID card"
+* subscriberId ^comment = "支付者在訂閱者ID卡上分配的識別碼"
 * subscriberId ^condition = "tw-core-3"
 * beneficiary only Reference(TWCorePatient)
 * beneficiary MS
-* beneficiary ^comment = "Identifier for a member assigned by the Payer."
+* beneficiary ^comment = "支付者分配給會員的識別碼。"
 * relationship 1.. MS
 //* relationship from $subscriber-relationship (extensible)
-* relationship ^comment = "Relationship of the member to the person insured (subscriber)"
+* relationship ^comment = "會員與被保險人（訂閱者）的關係"
 * period MS
-* period ^comment = "Date that the contract became effective and Date that the contract was terminated or coverage changed."
+* period ^comment = "合約生效日期和合約終止或保險變更的日期。"
 * payor ..1 MS
 * payor only Reference(TWCoreOrganization or TWCorePatient or TWCoreRelatedPerson)
-* payor ^comment = "Issuer of the Policy"
+* payor ^comment = "保單的發行機構"
 * payor ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * payor ^type.targetProfile[=].extension.valueBoolean = true
 * payor ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -43,28 +43,28 @@ Description:    "此臺灣核心-給付範圍（TW Core Coverage） Profile說�
 * class MS
 * class ^slicing.discriminator.type = #pattern
 * class ^slicing.discriminator.path = "type"
-* class ^slicing.description = "Slice based on value pattern"
+* class ^slicing.description = "基於值模式的切片"
 * class ^slicing.ordered = false
 * class ^slicing.rules = #open
 * class contains
     group 0..1 MS and
     plan 0..1 MS
-* class[group] ^short = "Group"
+* class[group] ^short = "群組"
 * class[group].type = http://terminology.hl7.org/CodeSystem/coverage-class#group
 * class[group].value MS
-* class[group].value ^short = "Group Number"
-* class[group].value ^comment = "Employer account identifier"
+* class[group].value ^short = "群組編號"
+* class[group].value ^comment = "雇主帳戶識別碼"
 * class[group].name MS
-* class[group].name ^short = "Group Name"
-* class[group].name ^comment = "Name of the Employer Account (135)"
-* class[plan] ^short = "Plan"
+* class[group].name ^short = "群組名稱"
+* class[group].name ^comment = "雇主帳戶名稱 (135)"
+* class[plan] ^short = "計畫"
 * class[plan].type = http://terminology.hl7.org/CodeSystem/coverage-class#plan
 * class[plan].value MS
-* class[plan].value ^short = "Plan Number"
-* class[plan].value ^comment = "Business concept used by a health plan to describe its benefit offerings"
+* class[plan].value ^short = "計畫編號"
+* class[plan].value ^comment = "健康計畫用來描述其福利項目的商業概念"
 * class[plan].name MS
-* class[plan].name ^short = "Plan Name"
-* class[plan].name ^comment = "Name of the health plan benefit offering assigned to the Plan Identifier"
+* class[plan].name ^short = "計畫名稱"
+* class[plan].name ^comment = "分配給計畫識別碼的健康計畫福利項目名稱"
 
 
 * identifier[memberid].assigner only Reference(TWCoreOrganization)
