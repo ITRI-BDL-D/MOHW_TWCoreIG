@@ -1,37 +1,46 @@
 Profile:        TWCoreCoverage
 Parent:         Coverage
 Id:             Coverage-twcore
-Title:          "TW Core Coverage"
-Description:    "此臺灣核心-給付範圍（TW Core Coverage） Profile說明本IG如何進一步定義FHIR的Coverage Resource以呈現給付範圍資料。"
+Title:          "臺灣核心給付範圍"
+Description:    "此臺灣核心-給付範圍(TW Core Coverage) Profile 說明本 IG 如何進一步定義 FHIR 的 Coverage Resource 以呈現給付範圍資料。"
 * ^version = "0.3.2"
 * . obeys tw-core-9
+* . ^short = "保險、醫療計畫或付款協議"
+* implicitRules ^short = "本資源內容的處理規則"
+* modifierExtension ^short = "擴充內容可能會改變資源解釋方式"
 * identifier MS
 * identifier ^slicing.discriminator.type = #pattern
 * identifier ^slicing.discriminator.path = "type"
 * identifier ^slicing.rules = #open
-* identifier ^short = "會員ID及其他識別碼"
+* identifier ^short = "會員 ID 及其他識別碼"
 * identifier contains memberid 0..1 MS
-* identifier[memberid] ^short = "會員ID"
+* identifier[memberid] ^short = "會員 ID"
 * identifier[memberid] ^condition = "tw-core-3"
 * identifier[memberid].type 1.. MS
 * identifier[memberid].type = http://terminology.hl7.org/CodeSystem/v2-0203#MB
 * identifier[memberid].type ^short = "會員號碼識別碼類型"
 * status MS
-* status ^comment = "`Coverage.status`本身並不表示個人的保險是否已終止或個人未被保險。也需要考慮`Coverage.period`。"
+* status ^comment = "`Coverage.status` 本身並不表示個人的保險是否已終止或個人未被保險。也需要考慮 `Coverage.period`。"
 * type MS
+* type ^short = "保險類型"
 * type from http://hl7.org/fhir/ValueSet/coverage-type (extensible)
 * subscriberId MS
-* subscriberId ^comment = "支付者在訂閱者ID卡上分配的識別碼"
+* subscriberId ^short = "被保險人 (訂閱者) ID"
+* subscriberId ^comment = "支付者在訂閱者 ID 卡上分配的識別碼"
 * subscriberId ^condition = "tw-core-3"
 * beneficiary only Reference(TWCorePatient)
 * beneficiary MS
+* beneficiary ^short = "受益人"
 * beneficiary ^comment = "支付者分配給會員的識別碼。"
 * relationship 1.. MS
+* relationship ^short = "與被保險人關係"
 //* relationship from $subscriber-relationship (extensible)
-* relationship ^comment = "會員與被保險人（訂閱者）的關係"
+* relationship ^comment = "會員與被保險人 (訂閱者) 的關係"
 * period MS
+* period ^short = "保險期間"
 * period ^comment = "合約生效日期和合約終止或保險變更的日期。"
 * payor ..1 MS
+* payor ^short = "保險給付者"
 * payor only Reference(TWCoreOrganization or TWCorePatient or TWCoreRelatedPerson)
 * payor ^comment = "保單的發行機構"
 * payor ^type.targetProfile[0].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
@@ -41,6 +50,7 @@ Description:    "此臺灣核心-給付範圍（TW Core Coverage） Profile說�
 * payor ^type.targetProfile[+].extension.url = "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support"
 * payor ^type.targetProfile[=].extension.valueBoolean = false
 * class MS
+* class ^short = "保險分類資訊"
 * class ^slicing.discriminator.type = #pattern
 * class ^slicing.discriminator.path = "type"
 * class ^slicing.description = "基於值模式的切片"
@@ -69,4 +79,8 @@ Description:    "此臺灣核心-給付範圍（TW Core Coverage） Profile說�
 
 * identifier[memberid].assigner only Reference(TWCoreOrganization)
 * policyHolder only Reference(TWCorePatient or TWCoreRelatedPerson or TWCoreOrganization)
+* policyHolder ^short = "保單持有人"
+* policyHolder ^comment = "保單的擁有者，可以是個人或組織"
 * subscriber only Reference(TWCorePatient or TWCoreRelatedPerson)
+* subscriber ^short = "被保險人 (訂閱者)"
+* subscriber ^comment = "保單中的主要被保險人"
