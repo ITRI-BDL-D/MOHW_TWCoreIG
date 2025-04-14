@@ -2,23 +2,23 @@ Profile:        TWCoreCareTeam
 Parent:         CareTeam
 Id:             CareTeam-twcore
 Title:          "TW Core CareTeam"
-Description:    "此臺灣核心-照護團隊（TW Core CareTeam） Profile說明本IG如何進一步定義FHIR的CareTeam Resource以呈現照護團隊資料。"
+Description:    "此臺灣核心-照護團隊(TW Core CareTeam) Profile 說明本 IG 如何進一步定義 FHIR 的 CareTeam Resource 以呈現照護團隊資料。"
 * ^version = "0.3.2"
 
 * . ^short = "在健康照護過程中提供服務的照護團隊"
-* . ^definition = "指明受照護者所需要的團隊，此資源用來識別參與關照受照護者或為受照護者（個人或群體）提供醫療保健服務的一群人及其在團隊中的角色。"
+* . ^definition = "指明受照護者所需要的團隊，此資源用來識別參與關照受照護者或為受照護者(個人或群體)提供醫療保健服務的一群人及其在團隊中的角色。"
 
-* id ^short = "不重複的ID用以識別儲存在特定FHIR Server中的CareTeam紀錄，通常又稱為邏輯性ID。"
-* id ^definition = "resource的邏輯ID，在resource的URL中使用。一旦指定，這個值永遠不會改變。"
-* id ^comment = "一個resource使用新增操作（create operation）提交給伺服器時，此resource沒有id，它的id在resource被創建後由伺器分配/指定。"
+* id ^short = "不重複的 ID 用以識別儲存在特定 FHIR Server 中的 CareTeam 紀錄，通常又稱為邏輯性 ID。"
+* id ^definition = "resource 的邏輯 ID，在 resource 的 URL 中使用。一旦指定，這個值永遠不會改變。"
+* id ^comment = "一個 resource 使用新增操作(create operation)提交給伺服器時，此 resource 沒有 id，它的 id 在 resource 被創建後由伺器分配/指定。"
 
-* meta ^short = "此CareTeam Resource的metadata"
-* meta ^definition = "關於resource的metadata。這是由基礎建設維護的內容。內容的更改可能並不總是與resource的版本更改相關聯。"
+* meta ^short = "此 CareTeam Resource 的 metadata"
+* meta ^definition = "關於 resource 的 metadata。這是由基礎建設維護的內容。內容的更改可能並不總是與 resource 的版本更改相關聯。"
 
-* language ^short = "用以表述CareTeam Resource內容的語言。"
-* language ^definition = "編寫此resource的語言"
-* language ^binding.description = "人類語言；鼓勵使用CommonLanguages代碼表中的代碼，但不強制一定要使用此代碼表，你也可使用其他代碼表的代碼或單純以文字表示。"
-* language ^comment = "提供語言是為了支援索引和可存取性（通常，文字表述轉語音等服務使用此語言標籤）。html lanuage tag適用於此敘述。resource上的語言標籤可用於指定從resource中的資料所產成的其他表述之語言。不是所有的內容都必須使用此語言。不應該假定Resource.language自動適用於敘述。如果指定語言，它也應該被指定在html中的div資料項目（關於xml:lang和html lang屬性之間的關係，見HTML5中的規則）。"
+* language ^short = "用以表述 CareTeam Resource 內容的語言。"
+* language ^definition = "編寫此 resource 的語言"
+* language ^binding.description = "人類語言；鼓勵使用 CommonLanguages 代碼表中的代碼，但不強制一定要使用此代碼表，你也可使用其他代碼表的代碼或單純以文字表示。"
+* language ^comment = "提供語言是為了支援索引和可存取性(通常，文字表述轉語音等服務使用此語言標籤)。html lanuage tag 適用於此敘述。resource 上的語言標籤可用於指定從 resource 中的資料所產成的其他表述之語言。不是所有的內容都必須使用此語言。不應該假定 Resource.language 自動適用於敘述。如果指定語言，它也應該被指定在 html 中的 div 資料項目(關於 xml:lang 和 html lang 屬性之間的關係，見 HTML5 中的規則)。"
 
 * status MS
 * status ^short = "proposed | active | suspended | inactive | entered-in-error"
@@ -64,8 +64,8 @@ Description:    "此臺灣核心-照護團隊（TW Core CareTeam） Profile說�
 * participant.member ^type.targetProfile[=].extension.valueBoolean = true
 
 * encounter only Reference(TWCoreEncounter)
-* encounter ^short = "與此CareTeam相關的就醫事件"
-* encounter ^definition = "此CareTeam是在哪次就醫情境中確定或修正的。"
+* encounter ^short = "與此 CareTeam 相關的就醫事件"
+* encounter ^definition = "此 CareTeam 是在哪次就醫情境中確定或修正的。"
 * encounter ^comment = "此資料項目不用於記錄照護團隊負責的所有就診。就診用來提供建立或變更照護團隊的情境。"
 
 * participant.onBehalfOf only Reference(TWCoreOrganization)
@@ -76,9 +76,9 @@ Description:    "此臺灣核心-照護團隊（TW Core CareTeam） Profile說�
 * reasonReference only Reference(TWCoreCondition)
 * reasonReference ^short = "為何需要此照護團隊"
 * reasonReference ^definition = "描述建立照護團隊的原因或需要照護團隊服務的情況。"
-* reasonReference ^comment = "可能的原因包括：病人目前的健康狀況、潛在的健康問題、複雜的醫療需求、已安排的程序（例如：手術）或出院後服務計畫。"
+* reasonReference ^comment = "可能的原因包括：病人目前的健康狀況、潛在的健康問題、複雜的醫療需求、已安排的程序(例如：手術)或出院後服務計畫。"
 
 * managingOrganization only Reference(TWCoreOrganization)
 * managingOrganization ^short = "照護團隊所屬的組織"
 * managingOrganization ^definition = "負責召集或管理此照護團隊的組織。"
-* managingOrganization ^comment = "此資料項目與participant.member中包含的組織不同，它特指負責管理照護團隊的組織。"
+* managingOrganization ^comment = "此資料項目與 participant.member 中包含的組織不同，它特指負責管理照護團隊的組織。"
