@@ -2,12 +2,18 @@ Profile:        TWCoreImmunization
 Parent:         Immunization
 Id:             Immunization-twcore
 Title:          "TW Core Immunization"
-Description:    "此臺灣核心-疫苗接種（TW Core Immunization） Profile說明本IG如何進一步定義FHIR的Immunization Resource以呈現疫苗接種資料。"
+Description:    "此臺灣核心-疫苗接種 (TW Core Immunization) Profile 說明本 IG 如何進一步定義 FHIR 的 Immunization Resource 以呈現疫苗接種資料。"
 * ^version = "0.3.2"
 * obeys tw-core-10
 * . ^mustSupport = false
 * . ^short = "疫苗接種"
 * . ^definition = "疫苗接種的記錄，包含接種的疫苗及事件的相關資訊。"
+
+* implicitRules ^short = "創建此內容所依據的一組規則"
+* implicitRules ^definition = "構建 resource 時遵循的一系列規則的參照，在處理內容時必須理解這些規則。通常這是對 IG 所定義之特殊規則及其他 profiles 的參照。"
+
+* modifierExtension ^short = "擴充內容可能會改變資源解釋方式"
+* modifierExtension ^definition = "可以修改標準資源解釋的擴充內容。擴展內容通常會增加其他屬性，但不會更改基本解釋。在理解修改擴展內容之前不應該解釋此疫苗接種資源。"
 
 * status MS
 * status ^short = "completed | entered-in-error | not-done"
@@ -19,7 +25,7 @@ Description:    "此臺灣核心-疫苗接種（TW Core Immunization） Profile�
 
 * vaccineCode MS
 * vaccineCode from http://hl7.org/fhir/ValueSet/vaccine-code (extensible)
-* vaccineCode ^short = "疫苗產品類型 (綁定到CVX疫苗代碼系統)"
+* vaccineCode ^short = "疫苗產品類型 (綁定到 CVX 疫苗代碼系統)"
 * vaccineCode ^definition = "用於識別施打的疫苗種類或類型。"
 * vaccineCode ^condition = "tw-core-10"
 
@@ -42,7 +48,7 @@ Description:    "此臺灣核心-疫苗接種（TW Core Immunization） Profile�
 
 * primarySource MS
 * primarySource ^short = "資料來源是否為主要來源"
-* primarySource ^definition = "指示記錄的資訊是否來自主要來源（如接種疫苗的人員），或是從次要來源（如病患本人回報）取得。"
+* primarySource ^definition = "指示記錄的資訊是否來自主要來源 (如接種疫苗的人員)，或是從次要來源 (如病患本人回報) 取得。"
 
 * location only Reference(TWCoreLocation)
 * location MS
@@ -52,6 +58,10 @@ Description:    "此臺灣核心-疫苗接種（TW Core Immunization） Profile�
 * manufacturer only Reference(TWCoreOrganization)
 * manufacturer ^short = "疫苗製造商"
 * manufacturer ^definition = "疫苗製造商的參照。"
+
+* isSubpotent MS
+* isSubpotent ^short = "疫苗效價是否低於標準"
+* isSubpotent ^definition = "表明接種的疫苗劑量是否已知低於建議量的標示，例如：部分劑量因患者移動而造成施打不完整、或完整劑量分成多次施打。"
 
 * performer.actor only Reference(TWCorePractitioner or TWCorePractitionerRole or TWCoreOrganization)
 * performer.actor ^short = "執行疫苗接種的人員或組織"
