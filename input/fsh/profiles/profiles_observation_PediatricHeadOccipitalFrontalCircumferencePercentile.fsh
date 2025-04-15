@@ -7,7 +7,7 @@ Description:    "此臺灣核心-兒童頭圍百分位數（TW Core Observation 
 * code only CodeableConceptTW
 * code = http://loinc.org#8289-1
 * code MS
-* code ^short = "Head Occipital-frontal circumference Percentile"
+* code ^short = "頭圍枕額圍百分位數"
 * valueQuantity 0..1 MS
 * valueQuantity.value 1..1 MS
 * valueQuantity.value only decimal
