@@ -1,9 +1,4 @@
 #!/bin/bash
-
-export LANG="en_US.UTF-8"
-export LC_ALL="en_US.UTF-8"
-# export JAVA_TOOL_OPTIONS="-Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8"
-
 publisher_jar=publisher.jar
 input_cache_path=./input-cache/
 echo Checking internet connection...
