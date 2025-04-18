@@ -1,7 +1,7 @@
 Profile:        TWCoreObservationPediatricHeadOccipitalFrontalCircumferencePercentile
 Parent:         TWCoreObservationVitalSigns
 Id:             Observation-pediatric-head-circumference-twcore
-Title:          "臺灣核心-兒童頭圍枕額圍百分位數觀察紀錄"
+Title:          "TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile"
 Description:    "此臺灣核心-兒童頭圍百分位數（TW Core Observation Pediatric Head Occipital Frontal Circumference Percentile） Profile 說明本IG如何進一步定義臺灣核心-生命體徵（TW Core Observation Vital Signs） Profile 以呈現兒童頭圍百分位數資料。"
 * ^version = "0.3.2"
 * . ^short = "兒童頭圍百分位數觀察紀錄"
