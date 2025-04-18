@@ -1,7 +1,7 @@
 Profile:        TWCoreObservationRespiratoryRate
 Parent:         http://hl7.org/fhir/StructureDefinition/resprate
 Id:             Observation-respiratory-rate-twcore
-Title:          "臺灣核心-呼吸速率觀察紀錄"
+Title:          "TW Core Observation Respiratory Rate"
 Description:    "此臺灣核心-呼吸速率（TW Core Observation Respiratory Rate）Profile 說明本IG如何進一步定義臺灣核心-生命體徵（TW Core Observation Vital Signs） Profile 以呈現呼吸速率資料。"
 * ^version = "0.3.2"
 * . ^short = "呼吸速率觀察紀錄"
@@ -18,8 +18,8 @@ Description:    "此臺灣核心-呼吸速率（TW Core Observation Respiratory 
 * category[VSCat].coding.system ^short = "術語系統的識別碼"
 * category[VSCat].coding.code ^short = "系統語法中所定義的符號"
 * code only CodeableConceptTW
-///* code = http://loinc.org#9279-1
-///* code MS
+//* code = http://loinc.org#9279-1
+//* code MS
 * code.coding 1..1
 * code ^short = "呼吸速率"
 * code.coding ^short = "由術語系統定義的代碼"
@@ -28,22 +28,21 @@ Description:    "此臺灣核心-呼吸速率（TW Core Observation Respiratory 
 * effective[x] ^short = "在記錄生命徵象時，常僅提供一個日期時間欄位。"
 * performer ^short = "負責本觀察的執行者"
 * value[x] ^short = "生命體徵數值，通常以 Quantity 資料型態記錄。輔助觀察如cuff size 可用其他型態如 CodeableConcept。"
-* value[x] only Quantity
-* valueQuantity ^short = "生命體徵數值，通常以 Quantity 資料型態記錄。輔助觀察如袖帶尺寸可用其他型態如 CodeableConcept。"
-* valueQuantity 0..1 MS
+* valueQuantity ^short = "生命體徵數值，通常以 Quantity 資料型態記錄。輔助觀察如cuff size可用其他型態如 CodeableConcept。"
+* valueQuantity.value ^short = "數值（含隱含精確度）"
+* valueQuantity.unit ^short = "單位顯示"
+* valueQuantity.system ^short = "定義單位代碼的系統"
+/* valueQuantity 0..1 MS
 * valueQuantity.value 1..1 MS
 * valueQuantity.value only decimal
-* valueQuantity.value ^short = "數值（含隱含精確度）"
 * valueQuantity.unit 1..1 MS
 * valueQuantity.unit only string
-* valueQuantity.unit ^short = "單位顯示"
 * valueQuantity.system 1..1 MS
 * valueQuantity.system only uri
 * valueQuantity.system = "http://unitsofmeasure.org" (exactly)
-* valueQuantity.system ^short = "定義單位代碼的系統"
 * valueQuantity.code 1..1 MS
 * valueQuantity.code only code
-* valueQuantity.code = #/min (exactly)
+* valueQuantity.code = #/min (exactly)*/
 * valueQuantity.code ^short = "以 UCUM 記錄的生命體徵值或組件結果"
 * dataAbsentReason ^short = "結果缺漏的原因"
 * specimen ^short = "本觀察所用檢體"
