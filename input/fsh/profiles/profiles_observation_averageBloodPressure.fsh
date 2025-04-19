@@ -23,7 +23,6 @@ Description:    "此臺灣核心-平均血壓（TW Core Observation Average Bloo
 * partOf ^definition = "此 Observation 所屬的較大事件或步驟。例如，作為某個處置（procedure）的一部分的觀察。"
 * partOf ^comment = "若要將 Observation 連結到 Encounter，請使用 encounter 欄位。關於如何參照其他 Observation，請參見下方說明。"
 
-* status ^short = "結果值的狀態"
 * status ^definition = "此欄位表示觀察結果的狀態。"
 * status ^comment = "此元素被標記為修飾性（modifier），因為 status 可能包含標示資源目前無效的代碼。"
 * status MS
