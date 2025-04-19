@@ -35,7 +35,6 @@
 > 下載檔案請參考 `input/pagecontent/downloads.md` 
 ## 授權
 
-MIT License  
 本專案授權詳見 [LICENSE](LICENSE)。
 
 ## 參考連結
