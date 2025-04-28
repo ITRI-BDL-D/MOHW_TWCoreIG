@@ -2,7 +2,7 @@ Profile:        TWCoreObservationCareExperiencePreference
 Parent:         Observation
 Id:             Observation-careExperiencePreference-twcore
 Title:          "TW Core Observation Care Experience Preference"
-Description:    "此臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）Profile 說明本IG如何進一步定義 FHIR 的 Observation Resource 以呈現照護經驗偏好資料。  
+Description:    "此臺灣核心-病人照護偏好註記（TW Core Observation Care Experience Preference）Profile 說明本 IG 如何進一步定義 FHIR 的 Observation Resource 以呈現照護經驗偏好資料。  
 (可填寫文字或代碼等說明)"
 * ^version = "0.3.2"
 * . ^short = "測量與簡單陳述"
@@ -50,6 +50,12 @@ Description:    "此臺灣核心-病人照護偏好註記（TW Core Observation 
 * code ^definition = "描述所觀察到的照護偏好內容。此處使用 LOINC 代碼表示病人的照護偏好。"
 * code ^comment = "所有的 code-value 配對需要被考慮，才能正確理解照護偏好觀察的意義。"
 * code MS
+* code.coding ^short = "由術語系統所定義的代碼"
+* code.coding ^definition = "參照由術語系統定義的代碼。"
+* code.coding.system ^short = "術語系統的識別碼"
+* code.coding.system ^definition = "定義代碼符號意義的代碼系統之識別。"
+* code.coding.code ^short = "照護偏好的代碼符號"
+* code.coding.code ^definition = "由系統定義的語法符號，代表照護偏好的類型。"
 
 * category only CodeableConceptTW
 * code only CodeableConceptTW
