@@ -11,7 +11,7 @@ Description: "此臺灣核心-性傾向 (TW Core Observation Sexual Orientation)
 * status ^definition = "觀察的狀態，如登錄、初步、最終等。"
 * code MS
 * code only CodeableConceptTW
-* code = http://loinc.org#76690-7 "性傾向"
+* code = http://loinc.org#76690-7 "Sexual orientation"
 * code ^short = "性傾向觀察類型"
 * code ^definition = "描述觀察之內容，識別此觀察為性傾向資訊。"
 * subject MS
