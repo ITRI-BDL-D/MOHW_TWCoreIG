@@ -92,5 +92,3 @@ Description:    "此臺灣核心-通用檢驗檢查（TW Core Simple Observation
 * hasMember ^definition = "與此檢驗檢查相關聯的其他檢驗檢查或問卷回應。"
 
 * performer only Reference(TWCorePractitioner or TWCoreOrganization or TWCorePatient or TWCorePractitionerRole or TWCoreCareTeam)
-* performer ^short = "執行檢驗檢查的人員或組織"
-* performer ^definition = "執行或負責此檢驗檢查的人員或組織。"
